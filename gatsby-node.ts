@@ -48,7 +48,7 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
   if (pages.data) {
     (pages.data as any).allPrismicPost.groupByCategory.forEach((data: any) => {
       createPage({
-        path: `/category/${data.fieldValue}`,
+        path: `/category/${data.fieldValue}/`,
         component: homePostListTemplatePath,
         context: {
           category: data.fieldValue,
@@ -58,7 +58,7 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
 
     (pages.data as any).allPrismicPost.groupByTag.forEach((data: any) => {
       createPage({
-        path: `/tag/${data.fieldValue}`,
+        path: `/tag/${data.fieldValue}/`,
         component: homePostListTemplatePath,
         context: {
           tag: data.fieldValue,
@@ -68,7 +68,7 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
 
     (pages.data as any).allPrismicPost.edges.forEach((edge: any) => {
       createPage({
-        path: `/posts/${edge.node.uid}`,
+        path: `/posts/${edge.node.uid}/`,
         component: postTemplatePath,
         context: {
           hasPrevious: !!edge.previous?.uid ?? false,

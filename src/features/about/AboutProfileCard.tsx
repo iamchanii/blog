@@ -1,11 +1,12 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React, { FC } from 'react';
 import { FaGithub } from 'react-icons/all';
-import { PostProfileCardQuery } from '../../../graphql-types';
 import { styled } from '../../stitches.config';
 
 export const AboutProfileCard: FC = () => {
-  const { prismicAbout } = useStaticQuery<GatsbyTypes.PostProfileCardQuery>(graphql`
+  const { prismicAbout } = useStaticQuery<
+    GatsbyTypes.PostProfileCardQuery
+  >(graphql`
     query PostProfileCard {
       prismicAbout {
         data {
@@ -25,7 +26,7 @@ export const AboutProfileCard: FC = () => {
 
   return (
     <div>
-      <AboutLink to="/about">{prismicAbout?.data?.name?.text}</AboutLink>
+      <AboutLink to="/about/">{prismicAbout?.data?.name?.text}</AboutLink>
       <Description>{prismicAbout?.data?.description?.text}</Description>
       {prismicAbout?.data?.github_link?.url && (
         <SocialLink href={prismicAbout?.data?.github_link?.url}>

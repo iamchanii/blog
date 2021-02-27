@@ -36,8 +36,10 @@ export const SEO: FC<SeoProps> = ({
     }
   `);
 
-  const getUrl = (url: string) =>
-    new URL(url, site?.siteMetadata?.siteUrl!).href;
+  const getUrl = (url: string) => {
+    let value = new URL(url, site?.siteMetadata?.siteUrl!).href;
+    return (value = !value.endsWith('/') ? `${value}/` : value);
+  };
   const pageDescription = description
     ? description
     : site?.siteMetadata?.description!;

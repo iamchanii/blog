@@ -30,7 +30,7 @@ export const HomePostList: FC<HomePostListProps> = ({
             status={
               category.fieldValue === currentCategory ? 'active' : undefined
             }
-            to={`/category/${category.fieldValue}`}
+            to={`/category/${category.fieldValue}/`}
           >
             {capitalize(category.fieldValue!)} ({category.totalCount})
           </Category>
@@ -39,7 +39,7 @@ export const HomePostList: FC<HomePostListProps> = ({
 
       <PostCards>
         {posts.map(post => (
-          <PostCard key={post.uid} to={`/posts/${post.uid}`}>
+          <PostCard key={post.uid} to={`/posts/${post.uid}/`}>
             <PostTitle>{post.data?.title?.text}</PostTitle>
             <PublicationDate
               dateTime={

@@ -114,13 +114,16 @@ const PostTemplate: FC<PageProps<PostTemplateQuery>> = ({ data }) => {
         )}
       </TitleContainer>
 
-      {data.prismicPost?.data?.body?.map(slice => {
+      {data.prismicPost?.data?.body?.map((slice, index) => {
         switch (slice?.__typename) {
           case 'PrismicPostBodyText':
-            return <PostBodyText html={slice?.primary?.content?.html!} />;
+            return (
+              <PostBodyText key={index} html={slice?.primary?.content?.html!} />
+            );
           case 'PrismicPostBodyImage':
             return (
               <PostBodyImage
+                key={index}
                 image={
                   slice?.primary?.image?.localFile?.childImageSharp?.fluid!
                 }
@@ -128,9 +131,11 @@ const PostTemplate: FC<PageProps<PostTemplateQuery>> = ({ data }) => {
               />
             );
           case 'PrismicPostBodyHr':
-            return <PostTemplateSeparator />;
+            return <PostTemplateSeparator key={index} />;
           case 'PrismicPostBodyQuote':
-            return <PostBodyQuote html={slice?.primary?.quote?.html!} />;
+            return (
+              <PostBodyQuote key={index} html={slice?.primary?.quote?.html!} />
+            );
         }
       })}
 

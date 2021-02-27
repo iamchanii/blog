@@ -67,7 +67,7 @@ export const Layout: FC<LayoutProps> = ({ children }) => {
           <HeaderLink variant="bold" to="/">
             {site?.siteMetadata?.title}
           </HeaderLink>
-          <HeaderLink to="/about">about</HeaderLink>
+          <HeaderLink to="/about/">about</HeaderLink>
         </HeaderContainer>
       </Header>
       <Main>{children}</Main>

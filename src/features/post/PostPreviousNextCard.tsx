@@ -15,13 +15,13 @@ export const PostPreviousNextCard: FC<PostPreviousNextCardProps> = ({
   return (
     <CardContainer>
       {previous && (
-        <PreviousCard to={`/posts/${previous.uid}`}>
+        <PreviousCard to={`/posts/${previous.uid}/`}>
           <Label>이전글</Label>
           <PostTitle>{previous.data?.title?.text}</PostTitle>
         </PreviousCard>
       )}
       {next && (
-        <NextCard to={`/posts/${next.uid}`}>
+        <NextCard to={`/posts/${next.uid}/`}>
           <Label>다음글</Label>
           <PostTitle>{next.data?.title?.text}</PostTitle>
         </NextCard>

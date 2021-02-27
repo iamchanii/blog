@@ -28,8 +28,8 @@ export const AboutCareers: FC<AboutCareersProps> = props => {
     <div>
       <h2>Projects</h2>
 
-      {data.prismicAbout?.data?.careers?.map(career => (
-        <CareerSection>
+      {data.prismicAbout?.data?.careers?.map((career, index) => (
+        <CareerSection key={index}>
           <header>
             <CareerCompanyName>{career!.company_name}</CareerCompanyName>
           </header>

@@ -1,7 +1,6 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
-import { styled, css } from 'gatsby-theme-stitches/src/stitches.config';
 import React, { FC } from 'react';
-import { LayoutQuery } from '../../../graphql-types';
+import { styled } from '../../stitches.config';
 import './layout.css';
 
 const Header = styled('header', {
@@ -51,7 +50,7 @@ const HeaderLink = styled(Link, {
 export interface LayoutProps {}
 
 export const Layout: FC<LayoutProps> = ({ children }) => {
-  const { site } = useStaticQuery<LayoutQuery>(graphql`
+  const { site } = useStaticQuery<GatsbyTypes.LayoutQuery>(graphql`
     query Layout {
       site {
         siteMetadata {

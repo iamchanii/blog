@@ -1,7 +1,7 @@
 import { graphql, PageProps } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
 import { withPreview } from 'gatsby-source-prismic';
-import { styled } from 'gatsby-theme-stitches/src/stitches.config';
+import { styled } from '../../stitches.config';
 import React, { FC } from 'react';
 import { JsonLd } from 'react-schemaorg';
 import { BlogPosting } from 'schema-dts';

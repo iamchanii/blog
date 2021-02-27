@@ -1,4 +1,4 @@
-import { styled } from 'gatsby-theme-stitches/src/stitches.config';
+import { styled } from '../../stitches.config';
 
 export const PostBodyHtmlRenderer = styled('div', {
   lineHeight: 1.625,

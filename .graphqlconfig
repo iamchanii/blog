@@ -1,22 +1,3 @@
 {
-  "name": "Blog GraphQL Schema",
-  "schemaPath": "./schema.graphql",
-  "extensions": {
-    "endpoints": {
-      "Default GraphQL Endpoint": {
-        "url": "http://localhost:8000/___graphql",
-        "headers": {
-          "user-agent": "JS GraphQL"
-        },
-        "introspect": false
-      },
-      "Default GraphQL Endpoint 2": {
-        "url": "http://localhost:8001/___graphql",
-        "headers": {
-          "user-agent": "JS GraphQL"
-        },
-        "introspect": false
-      }
-    }
-  }
+  "schemaPath": "schema.graphql"
 }

@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import { styled } from 'gatsby-theme-stitches/src/stitches.config';
+import { styled } from '../../stitches.config';
 import { capitalize } from 'lodash-es';
 import React, { FC } from 'react';
 import { IndexQuery, PrismicPostGroupConnection } from '../../../graphql-types';

@@ -1,5 +1,5 @@
 import GatsbyImage from 'gatsby-image';
-import { styled } from 'gatsby-theme-stitches/src/stitches.config';
+import { styled } from '../../stitches.config';
 import React, { FC } from 'react';
 import {
   GatsbyImageSharpFluid_WithWebpFragment,

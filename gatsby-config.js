@@ -42,7 +42,14 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    `gatsby-plugin-typegen`,
+    {
+      resolve: `gatsby-plugin-typegen`,
+      options: {
+        emitSchema: {
+          './schema.graphql': true,
+        },
+      },
+    },
     {
       resolve: 'gatsby-source-prismic',
       options: {
@@ -57,7 +64,6 @@ module.exports = {
         linkResolver,
       },
     },
-    `gatsby-theme-stitches`,
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-robots-txt`,
@@ -148,6 +154,6 @@ module.exports = {
         trackingId: 'UA-149856137-1',
       },
     },
-    `gatsby-plugin-preact`,
+    // `gatsby-plugin-preact`,
   ],
 };

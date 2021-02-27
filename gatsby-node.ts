@@ -1,13 +1,11 @@
 import { CreatePagesArgs } from 'gatsby';
 import * as path from 'path';
-import { PostQuery } from './graphql-types';
-import { HomePostListTemplate } from './src/features/home/HomePostListTemplate';
 
 // You can delete this file if you're not using it
 export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
   const { createPage } = actions;
 
-  const pages = await graphql<PostQuery>(`
+  const pages = await graphql(`
     query Post {
       allPrismicPost(
         sort: {
@@ -48,7 +46,7 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
   );
 
   if (pages.data) {
-    pages.data.allPrismicPost.groupByCategory.forEach(data => {
+    (pages.data as any).allPrismicPost.groupByCategory.forEach((data: any) => {
       createPage({
         path: `/category/${data.fieldValue}`,
         component: homePostListTemplatePath,
@@ -58,7 +56,7 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
       });
     });
 
-    pages.data.allPrismicPost.groupByTag.forEach(data => {
+    (pages.data as any).allPrismicPost.groupByTag.forEach((data: any) => {
       createPage({
         path: `/tag/${data.fieldValue}`,
         component: homePostListTemplatePath,
@@ -68,7 +66,7 @@ export const createPages = async ({ graphql, actions }: CreatePagesArgs) => {
       });
     });
 
-    pages.data.allPrismicPost.edges.forEach(edge => {
+    (pages.data as any).allPrismicPost.edges.forEach((edge: any) => {
       createPage({
         path: `/posts/${edge.node.uid}`,
         component: postTemplatePath,

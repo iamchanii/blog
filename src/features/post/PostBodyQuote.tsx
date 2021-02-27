@@ -1,4 +1,4 @@
-import { styled } from 'gatsby-theme-stitches/src/stitches.config';
+import { styled } from '../../stitches.config';
 import React, { FC } from 'react';
 import { PostBodyHtmlRenderer } from './PostBodyHtmlRenderer';
 

@@ -1,11 +1,11 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
-import { styled } from 'gatsby-theme-stitches/src/stitches.config';
 import React, { FC } from 'react';
 import { FaGithub } from 'react-icons/all';
 import { PostProfileCardQuery } from '../../../graphql-types';
+import { styled } from '../../stitches.config';
 
 export const AboutProfileCard: FC = () => {
-  const { prismicAbout } = useStaticQuery<PostProfileCardQuery>(graphql`
+  const { prismicAbout } = useStaticQuery<GatsbyTypes.PostProfileCardQuery>(graphql`
     query PostProfileCard {
       prismicAbout {
         data {

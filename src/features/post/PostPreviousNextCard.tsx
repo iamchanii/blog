@@ -1,7 +1,7 @@
-import { graphql, Link, useStaticQuery } from 'gatsby';
-import { styled } from 'gatsby-theme-stitches/src/stitches.config';
+import { Link } from 'gatsby';
 import React, { FC } from 'react';
 import { PrismicPost } from '../../../graphql-types';
+import { styled } from '../../stitches.config';
 
 export interface PostPreviousNextCardProps {
   next?: Partial<PrismicPost>;

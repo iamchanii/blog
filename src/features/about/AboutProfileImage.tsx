@@ -1,11 +1,11 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
-import { styled } from 'gatsby-theme-stitches/src/stitches.config';
 import React, { FC } from 'react';
 import { AboutProfileQuery } from '../../../graphql-types';
+import { styled } from '../../stitches.config';
 
 export const AboutProfileImage: FC = () => {
-  const data = useStaticQuery<AboutProfileQuery>(graphql`
+  const data = useStaticQuery<GatsbyTypes.AboutProfileQuery>(graphql`
     query AboutProfile {
       prismicAbout {
         data {

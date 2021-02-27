@@ -3,10 +3,7 @@
     "category": {
       "type": "Select",
       "config": {
-        "options": [
-          "development",
-          "book"
-        ],
+        "options": ["development", "book"],
         "default_value": "development",
         "label": "category",
         "placeholder": "카테고리를 선택하세요"
@@ -60,6 +57,12 @@
             {
               "name": "separator",
               "display": "separator"
+            }
+          ],
+          "markdown": [
+            {
+              "name": "markdown",
+              "display": "markdown"
             }
           ]
         },
@@ -125,6 +128,23 @@
             "icon": "face",
             "display": "list",
             "non-repeat": {},
+            "repeat": {}
+          },
+          "markdown": {
+            "type": "Slice",
+            "fieldset": "markdown",
+            "description": "markdown",
+            "icon": "code",
+            "display": "list",
+            "non-repeat": {
+              "markdown": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "preformatted, strong",
+                  "label": "markdown"
+                }
+              }
+            },
             "repeat": {}
           }
         }

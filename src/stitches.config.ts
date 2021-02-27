@@ -1,0 +1,53 @@
+import { createCss } from '@stitches/react';
+
+export const { styled, css, getCssString } = createCss({
+  theme: {
+    colors: {
+      gray50: '#F9FAFB',
+      gray100: '#F3F4F6',
+      gray200: '#E5E7EB',
+      gray300: '#D1D5DB',
+      gray400: '#9CA3AF',
+      gray500: '#6B7280',
+      gray600: '#4B5563',
+      gray700: '#374151',
+      gray800: '#1F2937',
+      gray900: '#111827',
+      violet50: '#F5F3FF',
+      violet100: '#EDE9FE',
+      violet200: '#DDD6FE',
+      violet300: '#C4B5FD',
+      violet400: '#A78BFA',
+      violet500: '#8B5CF6',
+      violet600: '#7C3AED',
+      violet700: '#6D28D9',
+      violet800: '#5B21B6',
+      violet900: '#4C1D95',
+    },
+    sizes: {
+      1: '1px',
+      2: '2px',
+      3: '4px',
+      4: '8px',
+      5: '16px',
+      6: '24px',
+      7: '32px',
+      8: '64px',
+      container: '640px',
+    },
+    space: {
+      1: '1px',
+      2: '2px',
+      3: '4px',
+      4: '8px',
+      5: '16px',
+      6: '24px',
+      7: '32px',
+      8: '64px',
+    },
+    zIndices: {
+      1: '10',
+    },
+  },
+  utils: {},
+});

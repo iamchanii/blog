@@ -1,13 +1,13 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import { styled } from 'gatsby-theme-stitches/src/stitches.config';
 import React, { FC } from 'react';
 import { AboutCareersQuery } from '../../../graphql-types';
+import { styled } from '../../stitches.config';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface AboutCareersProps {}
 
 export const AboutCareers: FC<AboutCareersProps> = props => {
-  const data = useStaticQuery<AboutCareersQuery>(graphql`
+  const data = useStaticQuery<GatsbyTypes.AboutCareersQuery>(graphql`
     query AboutCareers {
       prismicAbout {
         data {

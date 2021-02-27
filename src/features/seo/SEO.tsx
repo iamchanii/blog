@@ -23,7 +23,7 @@ export const SEO: FC<SeoProps> = ({
   imageWidth = 1200,
   imageHeight = 630,
 }) => {
-  const { site } = useStaticQuery<SeoQuery>(graphql`
+  const { site } = useStaticQuery<GatsbyTypes.SEOQuery>(graphql`
     query SEO {
       site {
         siteMetadata {

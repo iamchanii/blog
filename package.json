@@ -60,5 +60,8 @@
     "type": "git",
     "url": "https://github.com/iamchanii/blog"
   },
-  "browserslist": [">0.25%", "not dead"]
+  "browserslist": [
+    ">0.25%",
+    "not dead"
+  ]
 }

@@ -42,7 +42,7 @@ const Card = styled(Link, {
   borderRadius: '0.25rem',
   boxSizing: 'border-box',
 
-  ':hover': {
+  '&:hover': {
     backgroundColor: '$gray100',
   },
 });

@@ -94,7 +94,7 @@ const PostCard = styled(Link, {
   color: '$gray800',
   marginBottom: '$5',
 
-  ':hover': {
+  '&:hover': {
     backgroundColor: '$gray100',
   },
 });

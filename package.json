@@ -1,0 +1,41 @@
+{
+  "name": "blog.v2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "blog.v2",
+  "author": "이찬희",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "gatsby": "^4.16.0",
+    "gatsby-plugin-google-analytics": "^4.16.0",
+    "gatsby-plugin-image": "^2.16.1",
+    "gatsby-plugin-manifest": "^4.16.0",
+    "gatsby-plugin-mdx": "^3.16.1",
+    "gatsby-plugin-react-helmet": "^5.16.0",
+    "gatsby-plugin-sharp": "^4.16.1",
+    "gatsby-plugin-sitemap": "^5.16.0",
+    "gatsby-source-filesystem": "^4.16.0",
+    "gatsby-transformer-sharp": "^4.16.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.42",
+    "@types/react": "^18.0.12",
+    "@types/react-dom": "^18.0.5",
+    "typescript": "^4.7.3"
+  }
+}

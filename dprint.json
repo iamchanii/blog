@@ -13,7 +13,8 @@
     "**/*-lock.json",
     "**/.cache",
     "**/.yarn",
-    "**/public"
+    "**/public",
+    "**/*.bs.js"
   ],
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.69.1.wasm",

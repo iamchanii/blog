@@ -10,5 +10,11 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "dprint.dprint"
   },
+  "[json]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "[rescript]": {
+    "editor.defaultFormatter": "chenglou92.rescript-vscode"
+  },
   "typescript.tsdk": "node_modules/typescript/lib"
 }

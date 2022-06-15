@@ -1,0 +1,14 @@
+{
+  "prettier.enable": false,
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dprint.dprint"
+  },
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

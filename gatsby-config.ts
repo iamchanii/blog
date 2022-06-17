@@ -88,7 +88,6 @@ const config: GatsbyConfig = {
                   date: node.birthTime,
                   url,
                   guid: url,
-                  custom_elements: [{ 'content:encoded': node.childMdx!.html }],
                 });
               }),
             query: `#graphql
@@ -101,7 +100,7 @@ const config: GatsbyConfig = {
                     birthTime
                     childMdx {
                       excerpt
-                      html
+                      # html
                       slug
                       frontmatter {
                         title

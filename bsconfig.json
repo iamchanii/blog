@@ -13,5 +13,10 @@
   "reason": { "react-jsx": 3 },
   "bs-dependencies": [
     "@rescript/react"
-  ]
+  ],
+  "gentypeconfig": {
+    "language": "typescript",
+    "generatedFileExtension": ".gen.tsx",
+    "module": "es6"
+  }
 }

@@ -14,7 +14,8 @@
     "**/.cache",
     "**/.yarn",
     "**/public",
-    "**/*.bs.js"
+    "**/*.bs.js",
+    "**/*.gen.tsx"
   ],
   "plugins": [
     "https://plugins.dprint.dev/typescript-0.69.1.wasm",

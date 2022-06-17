@@ -35,3 +35,5 @@ lib/bs
 *.mliast
 .merlin
 .bsb.lock
+*.bs.js
+*.gen.tsx

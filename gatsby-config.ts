@@ -13,7 +13,6 @@ const config: GatsbyConfig = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-image',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-mdx',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
@@ -41,19 +40,14 @@ const config: GatsbyConfig = {
       __key: 'contents',
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: 'gatsby-plugin-mdx',
       options: {
-        plugins: [
+        extensions: ['.md', '.mdx'],
+        gatsbyRemarkPlugins: [
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 630,
-            },
-          },
-          {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: {
-              wrapperStyle: 'margin-bottom: 1.0725rem',
+              maxWidth: 640,
             },
           },
           'gatsby-remark-prismjs',
@@ -80,37 +74,36 @@ const config: GatsbyConfig = {
           {
             serialize: (
               {
-                query: { site, allMdx },
+                query: { site, allFile },
               }: {
-                query: { site: Queries.Site; allMdx: Queries.MdxConnection };
+                query: { site: Queries.Site; allFile: Queries.FileConnection };
               },
             ) =>
-              allMdx.nodes.map((node) => {
-                const url = new URL(node.slug!, site.siteMetadata.siteUrl).toString();
+              allFile.nodes.map((node) => {
+                const url = new URL(node.childMdx!.slug!, site.siteMetadata.siteUrl).toString();
 
-                return Object.assign({}, node.frontmatter, {
-                  description: node.excerpt,
-                  date: (node.parent as Queries.File).birthTime,
+                return Object.assign({}, node.childMdx!.frontmatter, {
+                  description: node.childMdx!.excerpt,
+                  date: node.birthTime,
                   url,
                   guid: url,
-                  custom_elements: [{ 'content:encoded': node.html }],
+                  custom_elements: [{ 'content:encoded': node.childMdx!.html }],
                 });
               }),
             query: `#graphql
               {
-                allMdx(
-                  sort: { order: DESC, fields: [] }
+                allFile(
+                  filter: {childMdx: {id: {ne: null}}}
+                  sort: {fields: birthTime, order: DESC}
                 ) {
                   nodes {
-                    excerpt
-                    html
-                    slug
-                    frontmatter {
-                      title
-                    }
-                    parent {
-                      ... on File {
-                        birthTime
+                    birthTime
+                    childMdx {
+                      excerpt
+                      html
+                      slug
+                      frontmatter {
+                        title
                       }
                     }
                   }

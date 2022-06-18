@@ -4889,7 +4889,7 @@ __metadata:
     gatsby-plugin-image: ^2.16
     gatsby-plugin-manifest: ^4.16
     gatsby-plugin-mdx: ^3.16
-    gatsby-plugin-netlify: ^5.0.0
+    gatsby-plugin-netlify: ^5.0
     gatsby-plugin-postcss: ^5.16
     gatsby-plugin-react-helmet: ^5.16
     gatsby-plugin-robots-txt: ^1.7
@@ -8497,7 +8497,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-netlify@npm:^5.0.0":
+"gatsby-plugin-netlify@npm:^5.0":
   version: 5.0.0
   resolution: "gatsby-plugin-netlify@npm:5.0.0"
   dependencies:

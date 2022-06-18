@@ -1,8 +1,16 @@
+diff --git a/gentype.exe b/gentype.exe
+deleted file mode 100755
+index 30df9c7966c5cab032df6235c5d575029cac2a43..0000000000000000000000000000000000000000
+--- a/gentype.exe
++++ /dev/null
+@@ -1,2 +0,0 @@
+-echo "gentype was not installed correctly"
+-exit 1
 diff --git a/postinstall.js b/postinstall.js
-index 2c29d18ffd10c9d356ef98ac976efe6321fc5c06..4936649f5e4706667b8f52fa2f06d7a5c4a61ff2 100644
+index 2c29d18ffd10c9d356ef98ac976efe6321fc5c06..a5451170bb79053de4ba0d0a68dcb5b98b29d445 100644
 --- a/postinstall.js
 +++ b/postinstall.js
-@@ -1,35 +1,40 @@
+@@ -1,35 +1,37 @@
 -var path = require("path");
 -var fs = require("fs");
 +var path = require('path');
@@ -31,17 +39,14 @@ index 2c29d18ffd10c9d356ef98ac976efe6321fc5c06..4936649f5e4706667b8f52fa2f06d7a5
 -  if(!fs.existsSync(sourcePath)) {
 -      return fail("error: executable not found: " + sourcePath);
 +  if (!fs.existsSync(sourcePath)) {
-+    return fail('error: executable not found: ' + sourcePath);
++    // I have to rebuild rescript manually...
++    console.warn('error: executable not found: ' + sourcePath);
++    return;
    }
    fs.renameSync(sourcePath, targetPath);
    fs.chmodSync(targetPath, 0777);
  }
  
-+if (fs.existsSync(targetPath)) {
-+  console.log('gentype is already cached and installed: ', targetPath);
-+  process.exit(0);
-+}
-+
  switch (platform) {
 -  case "win32":
 -  case "linux":

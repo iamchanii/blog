@@ -9055,10 +9055,10 @@ __metadata:
 
 "gentype@patch:gentype@npm:4.4.0#.yarn/patches/gentype-npm-4.4.0-4a33b7730b.patch::locator=blog2%40workspace%3A.":
   version: 4.4.0
-  resolution: "gentype@patch:gentype@npm%3A4.4.0#.yarn/patches/gentype-npm-4.4.0-4a33b7730b.patch::version=4.4.0&hash=1e459e&locator=blog2%40workspace%3A."
+  resolution: "gentype@patch:gentype@npm%3A4.4.0#.yarn/patches/gentype-npm-4.4.0-4a33b7730b.patch::version=4.4.0&hash=83ea7a&locator=blog2%40workspace%3A."
   bin:
     gentype: gentype.exe
-  checksum: 868d74422deaae368992c148683c47ae56708e858f87da5847984b2e8fc184f1d596d4d64f6807b7608cebdc16ed6c782570d713f397a479d90a88151cec6a64
+  checksum: 230a562ad27cb10aa9f774bde3a68e93ab05ce979a7444a18a39d73fd4e9665121d6fff2df576b840448fc90d64a4710c12c3ad1e98bcafd3467fe895d1b9410
   languageName: node
   linkType: hard
 

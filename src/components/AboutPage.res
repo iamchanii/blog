@@ -1,4 +1,4 @@
 @react.component @genType
 let make = () => {
-  <Layout> <Profile.About /> <AboutExperiences /> </Layout>
+  <Layout> <Meta title="About" url="/about" /> <Profile.About /> <AboutExperiences /> </Layout>
 }

@@ -19,5 +19,5 @@ let make = (~data) => {
   }
   let nodes = data->Js.Array2.map(nodeToElement)->React.array
 
-  <Layout> <div className=Styles.list> {nodes} </div> </Layout>
+  <Layout> <Meta title="Home" /> <div className=Styles.list> {nodes} </div> </Layout>
 }

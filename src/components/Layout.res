@@ -1,6 +1,6 @@
 module Header = {
   module Styles = {
-    let wrapper = "flex justify-between items-center h-12 px-4"
+    let wrapper = "flex justify-between items-center h-12 px-4 mx-4"
     let logo = "font-bold text-primary"
     let about = "text-primary"
   }
@@ -20,7 +20,7 @@ module Header = {
 let make = (~className="", ~children) => {
   module Styles = {
     let main = "max-w-screen-container mx-auto leading-relaxed text-slate-800"
-    let section = "px-4"
+    let section = "px-4 mx-4"
   }
 
   <main className=Styles.main>

@@ -35,7 +35,7 @@ module Article = {
   @react.component
   let make = () => {
     module Styles = {
-      let wrapper = "flex items-center gap-4 p-4 -mx-4 rounded-lg hover:bg-slate-50 my-16"
+      let wrapper = "flex flex-col container:flex-row gap-4 p-4 -mx-4 rounded-lg hover:bg-slate-50 my-16"
       let name = "font-bold"
       let avatar = "rounded-full w-24 h-24"
     }

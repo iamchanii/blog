@@ -60,6 +60,6 @@
   },
   "packageManager": "yarn@3.2.1",
   "resolutions": {
-    "gentype@4.4.0": "patch:gentype@npm:4.4.0#.yarn/patches/gentype-npm-4.4.0-4a33b7730b.patch"
+    "gentype@^4.4": "patch:gentype@npm:4.4.0#.yarn/patches/gentype-npm-4.4.0-4a33b7730b.patch"
   }
 }

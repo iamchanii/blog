@@ -9,7 +9,6 @@
     "rescript"
   ],
   "scripts": {
-    "postinstall": "yarn re:build",
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "yarn re:clean && yarn re:build && gatsby build",

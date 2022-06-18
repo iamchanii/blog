@@ -4885,11 +4885,11 @@ __metadata:
     autoprefixer: ^10.4
     gatsby: ^4.16
     gatsby-plugin-feed: ^4.16
-    gatsby-plugin-gatsby-cloud: ^4.16
     gatsby-plugin-google-analytics: ^4.16
     gatsby-plugin-image: ^2.16
     gatsby-plugin-manifest: ^4.16
     gatsby-plugin-mdx: ^3.16
+    gatsby-plugin-netlify: ^5.0
     gatsby-plugin-postcss: ^5.16
     gatsby-plugin-react-helmet: ^5.16
     gatsby-plugin-robots-txt: ^1.7
@@ -8114,7 +8114,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-extra@npm:^10.1.0":
+"fs-extra@npm:^10.0.0, fs-extra@npm:^10.1.0":
   version: 10.1.0
   resolution: "fs-extra@npm:10.1.0"
   dependencies:
@@ -8266,7 +8266,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-core-utils@npm:^3.16.0":
+"gatsby-core-utils@npm:^3.16.0, gatsby-core-utils@npm:^3.5.2":
   version: 3.16.0
   resolution: "gatsby-core-utils@npm:3.16.0"
   dependencies:
@@ -8386,24 +8386,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-plugin-gatsby-cloud@npm:^4.16":
-  version: 4.16.0
-  resolution: "gatsby-plugin-gatsby-cloud@npm:4.16.0"
-  dependencies:
-    "@babel/runtime": ^7.15.4
-    fs-extra: ^10.1.0
-    gatsby-core-utils: ^3.16.0
-    gatsby-telemetry: ^3.16.0
-    kebab-hash: ^0.1.2
-    lodash: ^4.17.21
-    webpack-assets-manifest: ^5.1.0
-  peerDependencies:
-    gatsby: ^4.0.0-next
-    webpack: "*"
-  checksum: a6532303c13746856222d16c79006234d7d3f0621a4a6615196c56c9dc0b80a5c8ad4bdaced14ba693ac562f2152e93785f10e6be80469620ececbda48e6cc39
-  languageName: node
-  linkType: hard
-
 "gatsby-plugin-google-analytics@npm:^4.16":
   version: 4.16.0
   resolution: "gatsby-plugin-google-analytics@npm:4.16.0"
@@ -8512,6 +8494,22 @@ __metadata:
     react: ^16.9.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.9.0 || ^17.0.0 || ^18.0.0
   checksum: 57914efdd53b58e9775888faebd5aa26949e0c441c3233b4b704f370cf21629a0a63d729554e84573e353ab9f0e3ad3272e0188ac9fd48c52c87c13277226f5c
+  languageName: node
+  linkType: hard
+
+"gatsby-plugin-netlify@npm:^5.0":
+  version: 5.0.0
+  resolution: "gatsby-plugin-netlify@npm:5.0.0"
+  dependencies:
+    "@babel/runtime": ^7.16.7
+    fs-extra: ^10.0.0
+    gatsby-core-utils: ^3.5.2
+    kebab-hash: ^0.1.2
+    lodash.mergewith: ^4.6.2
+    webpack-assets-manifest: ^5.0.6
+  peerDependencies:
+    gatsby: ^4.0.0
+  checksum: 0d3d5b363ded9cec966eb68f87e5e88f5bd5ac45edb5cbaee9d9457358b29f257aef29c603a2dce17fe3e7c069d7fc2575d205240c3c981b6c13665ac57c672d
   languageName: node
   linkType: hard
 
@@ -11189,6 +11187,13 @@ __metadata:
   version: 4.6.2
   resolution: "lodash.merge@npm:4.6.2"
   checksum: ad580b4bdbb7ca1f7abf7e1bce63a9a0b98e370cf40194b03380a46b4ed799c9573029599caebc1b14e3f24b111aef72b96674a56cfa105e0f5ac70546cdc005
+  languageName: node
+  linkType: hard
+
+"lodash.mergewith@npm:^4.6.2":
+  version: 4.6.2
+  resolution: "lodash.mergewith@npm:4.6.2"
+  checksum: a6db2a9339752411f21b956908c404ec1e088e783a65c8b29e30ae5b3b6384f82517662d6f425cc97c2070b546cc2c7daaa8d33f78db7b6e9be06cd834abdeb8
   languageName: node
   linkType: hard
 
@@ -17067,7 +17072,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack-assets-manifest@npm:^5.1.0":
+"webpack-assets-manifest@npm:^5.0.6":
   version: 5.1.0
   resolution: "webpack-assets-manifest@npm:5.1.0"
   dependencies:

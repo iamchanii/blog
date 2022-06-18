@@ -1,6 +1,5 @@
 module Styles = {
-  let main = "max-w-screen-container mx-auto"
-
+  let main = "max-w-screen-container mx-auto leading-relaxed text-slate-800"
   let section = "px-4"
 }
 

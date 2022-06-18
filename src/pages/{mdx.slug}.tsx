@@ -1,6 +1,6 @@
 import { graphql, PageProps } from 'gatsby';
 import * as React from 'react';
-import { make as Content } from '../components/Content.gen';
+import { make as Content } from '../components/Article/Content.gen';
 
 const ContentPage = ({ data }: PageProps<Queries.ContentPageQuery>) => {
   return (

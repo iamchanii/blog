@@ -17,6 +17,10 @@ module About = {
     }
 
     <div className=Styles.wrapper>
+      <ReactHelmet>
+        <link rel="preconnect" href="https://github.com" />
+        <link rel="preconnect" href="https://avatars.githubusercontent.com" />
+      </ReactHelmet>
       <img className=Styles.avatar src={githubAvatar} alt="" width="128" height="128" />
       <div>
         <strong className=Styles.name> {name->React.string} </strong>
@@ -37,6 +41,10 @@ module Article = {
     }
 
     <Gatsby.Link to="/about" className=Styles.wrapper>
+      <ReactHelmet>
+        <link rel="preconnect" href="https://github.com" />
+        <link rel="preconnect" href="https://avatars.githubusercontent.com" />
+      </ReactHelmet>
       <img className=Styles.avatar src={githubAvatar} alt="" width="96" height="96" />
       <div>
         <strong className=Styles.name> {name->React.string} </strong>

@@ -1,10 +1,10 @@
 import { graphql, PageProps } from 'gatsby';
 import * as React from 'react';
-import { make as Content } from '../components/Article/Content.gen';
+import { make as ArticlePage } from '../components/ArticlePage.gen';
 
-const ContentPage = ({ data }: PageProps<Queries.ContentPageQuery>) => {
+export default ({ data }: PageProps<Queries.ArticlePageQuery>) => {
   return (
-    <Content
+    <ArticlePage
       title={data.mdx!.frontmatter!.title}
       date={(data.mdx!.parent as Queries.File).birthTime}
       body={data.mdx!.body as any}
@@ -12,10 +12,8 @@ const ContentPage = ({ data }: PageProps<Queries.ContentPageQuery>) => {
   );
 };
 
-export default ContentPage;
-
 export const query = graphql`
-  query ContentPage ($id: String) {
+  query ArticlePage ($id: String) {
     mdx(id: { eq: $id }) {
       frontmatter {
         title

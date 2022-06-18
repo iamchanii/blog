@@ -1,10 +1,10 @@
 import { graphql, PageProps } from 'gatsby';
 import * as React from 'react';
-import { make as BlogList } from '../components/ArticleList/BlogList.gen';
+import { make as ArticleListPage } from '../components/ArticleListPage.gen';
 
-const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
+export default ({ data }: PageProps<Queries.ArticleListPageQuery>) => {
   return (
-    <BlogList
+    <ArticleListPage
       data={data.allFile.nodes.map(node => ({
         id: node.childMdx!.id,
         frontmatter: node.childMdx!.frontmatter!,
@@ -16,10 +16,8 @@ const IndexPage = ({ data }: PageProps<Queries.IndexPageQuery>) => {
   );
 };
 
-export default IndexPage;
-
 export const query = graphql`
-  query IndexPage {
+  query ArticleListPage {
     allFile(
       filter: {childMdx: {id: {ne: null}}}
       sort: {fields: birthTime, order: DESC}

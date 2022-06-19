@@ -120,9 +120,12 @@
   & ol,
   & dl,
   & table,
-  & pre,
   & details {
     @apply mt-0 mb-2;
+  }
+
+  & pre {
+    @apply my-6 rounded-lg;
   }
 
   & > *:first-child {

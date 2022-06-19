@@ -140,7 +140,7 @@
     @apply text-sm text-slate-600;
 
     & > hr {
-      @apply mt-8 mb-4;
+      @apply mt-8 mb-4 border-slate-100 dark:border-slate-600;
     }
 
     & ol {

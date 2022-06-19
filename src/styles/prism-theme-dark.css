@@ -27,6 +27,22 @@
     hyphens: none;
   }
 
+  /* Selection */
+  code[class*='language-']::-moz-selection,
+  code[class*='language-'] *::-moz-selection,
+  pre[class*='language-'] *::-moz-selection {
+    /* background: hsl(230, 1%, 90%); */
+    @apply bg-slate-700;
+    color: inherit;
+  }
+
+  code[class*='language-']::selection,
+  code[class*='language-'] *::selection,
+  pre[class*='language-'] *::selection {
+    @apply bg-slate-700;
+    color: inherit;
+  }
+
   /* Code blocks */
   pre[class*='language-'] {
     padding: 1em;
@@ -37,7 +53,8 @@
 
   :not(pre) > code[class*='language-'],
   pre[class*='language-'] {
-    background: #282a36;
+    /* background: #282a36; */
+    @apply bg-slate-900;
   }
 
   /* Inline code */

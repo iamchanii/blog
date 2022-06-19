@@ -4,6 +4,7 @@ let make = (~title, ~date, ~content, ~slug) => {
     let card = "flex flex-col gap-2 p-4 rounded-lg hover:bg-slate-50"
     let title = "font-bold"
     let date = "text-sm"
+    let content = "line-clamp-3"
   }
 
   <Gatsby.Link className=Styles.card to={slug}>
@@ -11,6 +12,6 @@ let make = (~title, ~date, ~content, ~slug) => {
       <p className=Styles.title> {title->React.string} </p>
       <time className=Styles.date> {date->React.string} </time>
     </div>
-    <p> {content->React.string} </p>
+    <p className={Styles.content}> {content->React.string} </p>
   </Gatsby.Link>
 }

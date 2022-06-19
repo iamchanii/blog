@@ -3319,6 +3319,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tailwindcss/line-clamp@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@tailwindcss/line-clamp@npm:0.4.0"
+  peerDependencies:
+    tailwindcss: ">=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1"
+  checksum: 71ba25a4a18323496a7af34e55871121b8459530b0e5696c4173fd65a76162675619f1d1158a8a32e1ace2069333949bef6f1061b17f49fef98dc2291a979dcd
+  languageName: node
+  linkType: hard
+
 "@tokenizer/token@npm:^0.3.0":
   version: 0.3.0
   resolution: "@tokenizer/token@npm:0.3.0"
@@ -4879,6 +4888,7 @@ __metadata:
     "@mdx-js/mdx": ^1.6
     "@mdx-js/react": ^1.6
     "@rescript/react": ^0.10
+    "@tailwindcss/line-clamp": ^0.4.0
     "@types/node": ^17.0
     "@types/react": ^18.0
     "@types/react-dom": ^18.0

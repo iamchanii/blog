@@ -21,5 +21,9 @@
   "[markdown]": {
     "editor.defaultFormatter": "dprint.dprint"
   },
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "deno.enable": true,
+  "deno.lint": true,
+  "deno.unstable": true,
+  "deno.enablePaths": ["./scripts"]
 }

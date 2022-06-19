@@ -27,10 +27,6 @@ let make = () => {
         Text(`다노 앱의 함께하기 탭 프론트를 개발했습니다.`),
         Text(`다노의 브랜드를 소개하고 다노핏, 다노핏코치를 결제할 수 있는 프로젝트를 진행했습니다.`),
         TextWithLink(
-          `네이버 데브톡에서 디자인 시스템 개발을 주제로 발표를 진행했습니다.`,
-          "https://tv.naver.com/v/20411175/list/196655",
-        ),
-        TextWithLink(
           `React Query를 쉽게 사용할 수 있는 라이브러리를 오픈소스로 공개했습니다.`,
           "https://github.com/dano-inc/react-query-helper",
         ),

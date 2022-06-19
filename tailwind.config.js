@@ -10,6 +10,7 @@ module.exports = {
       },
       colors: {
         primary: '#5B21B6',
+        'primary-dark': '#A67EE7',
       },
     },
   },

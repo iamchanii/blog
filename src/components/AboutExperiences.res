@@ -64,7 +64,7 @@ let make = () => {
 
   let itemToElement = (item, index) => {
     module Styles = {
-      let link = "text-primary hover:underline"
+      let link = "text-primary dark:text-primary-dark hover:underline"
     }
 
     <li key={index->Js.Int.toString}>
@@ -96,7 +96,7 @@ let make = () => {
   }
 
   module Styles = {
-    let experience = "font-bold my-4 pb-2 border-b border-y-slate-100"
+    let experience = "font-bold my-4 pb-2 border-b border-y-slate-100 dark:border-y-slate-600"
     let experienceList = "flex flex-col gap-6"
   }
 

@@ -1,7 +1,7 @@
 @react.component
 let make = (~title, ~date, ~content, ~slug) => {
   module Styles = {
-    let card = "flex flex-col gap-2 p-4 rounded-lg hover:bg-slate-50"
+    let card = "flex flex-col gap-2 p-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700"
     let title = "font-bold"
     let date = "text-sm"
     let content = "line-clamp-3"

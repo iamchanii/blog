@@ -13,7 +13,7 @@ module About = {
       let wrapper = "mb-6"
       let name = "font-bold"
       let avatar = "rounded-full w-32 h-32 my-8"
-      let githubUrl = "text-primary font-bold text-sm hover:underline"
+      let githubUrl = "text-primary dark:text-primary-dark font-bold text-sm hover:underline"
     }
 
     <div className=Styles.wrapper>
@@ -35,7 +35,7 @@ module Article = {
   @react.component
   let make = () => {
     module Styles = {
-      let wrapper = "flex flex-col container:flex-row gap-4 p-4 -mx-4 rounded-lg hover:bg-slate-50 mt-16"
+      let wrapper = "flex flex-col container:flex-row gap-4 p-4 -mx-4 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-700 mt-16"
       let name = "font-bold"
       let avatar = "rounded-full w-24 h-24"
     }

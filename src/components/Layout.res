@@ -1,8 +1,8 @@
 module Header = {
   module Styles = {
     let wrapper = "flex justify-between items-center h-12 px-4 mx-4"
-    let logo = "font-bold text-primary"
-    let about = "text-primary"
+    let logo = "font-bold text-primary dark:text-primary-dark"
+    let about = "text-primary dark:text-primary-dark"
   }
 
   @react.component
@@ -21,7 +21,7 @@ let make = (~className="", ~children) => {
   open SiteMetadata
 
   module Styles = {
-    let main = "max-w-screen-container mx-auto leading-relaxed text-slate-800 mb-16"
+    let main = "max-w-screen-container mx-auto leading-relaxed text-slate-800 dark:text-slate-300 mb-16"
     let footer = "text-center text-xs text-slate-500 mt-16"
     let section = "px-4 mx-4"
   }

@@ -126,7 +126,7 @@ const parsePrismicPost = (data: any): PrismicPost => ({
 });
 
 const __dirname = new URL('.', import.meta.url).pathname;
-const contentsPath = path.resolve(__dirname, '..', 'contents', 'posts');
+const contentsPath = path.resolve(__dirname, '..', 'contents');
 
 const ensurePostDir = async (post: PrismicPost) => {
   const postDir = path.join(contentsPath, post.slug);

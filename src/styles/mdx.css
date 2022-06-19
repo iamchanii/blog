@@ -175,4 +175,12 @@
   & .gatsby-resp-image-wrapper {
     @apply rounded-lg overflow-hidden my-6;
   }
+
+  & code[class*='language-'] {
+    font-size: 0.875em;
+  }
+
+  & :not(pre) > code[class*='language-'] {
+    @apply mx-1 px-1;
+  }
 }

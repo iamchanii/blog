@@ -147,7 +147,14 @@ const nhm = new NodeHtmlMarkdown(undefined, {
 });
 
 const getData = (post: PrismicPost) => {
-  const buffer: string[] = [`---\ntitle: "${post.title}"\n---`];
+  const buffer: string[] = [
+    [
+      '---',
+      `title: "${post.title}"`,
+      `date: "${post.date}"`,
+      '---',
+    ].join('\n'),
+  ];
   const imagesToDownload: string[] = [];
 
   post.blocks.forEach((block) => {
@@ -174,10 +181,9 @@ const getData = (post: PrismicPost) => {
   return { markdown: buffer.join('\n\n'), imagesToDownload };
 };
 
-const writeMarkdown = async (postDir: string, markdown: string, utime: Date) => {
+const writeMarkdown = async (postDir: string, markdown: string) => {
   const indexDir = path.join(postDir, 'index.md');
   await Deno.writeTextFile(indexDir, markdown);
-  await Deno.utime(indexDir, utime, utime);
 };
 
 const downloadImage = async (postDir: string, imageUrl: string) => {
@@ -196,7 +202,7 @@ const posts = rawPosts.map(parsePrismicPost);
 posts.forEach(async (post) => {
   const postDir = await ensurePostDir(post);
   const { markdown, imagesToDownload } = getData(post);
-  await writeMarkdown(postDir, markdown, new Date(post.date));
+  await writeMarkdown(postDir, markdown);
 
   if (imagesToDownload.length > 0) {
     for await (const imageUrl of imagesToDownload) {

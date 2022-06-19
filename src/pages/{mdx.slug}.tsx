@@ -6,11 +6,11 @@ export default ({ data }: PageProps<Queries.ArticlePageQuery>) => {
   return (
     <ArticlePage
       title={data.mdx!.frontmatter!.title}
-      date={(data.mdx!.parent as Queries.File).birthTime}
+      date={data.mdx!.frontmatter!.date}
       body={data.mdx!.body as any}
       description={data.mdx!.excerpt}
       url={data.mdx!.slug!}
-      isoDate={(data.mdx!.parent as any).isoDate}
+      isoDate={data.mdx!.frontmatter!.rawDate}
       wordCount={data.mdx!.wordCount!.words!}
     />
   );
@@ -23,14 +23,10 @@ export const query = graphql`
       excerpt(truncate: true, pruneLength: 150)
       frontmatter {
         title
+        date(formatString: "YYYY. MM. DD")
+        rawDate: date
       }
       body
-      parent {
-        ... on File {
-          birthTime(formatString: "YYYY. MM. DD")
-          isoDate: birthTime
-        }
-      }
       wordCount {
         words
       }

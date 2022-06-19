@@ -1,5 +1,6 @@
 ---
 title: "Yarn PnP 프로젝트에서 Commitizen 설정하기"
+date: "2021-07-26T13:36:18+0000"
 ---
 
 나는 커밋 메시지를 작성할 때 [Conventional Commits 스펙](https://www.conventionalcommits.org/ko/v1.0.0/)에 맞게 쓰는 것을 선호한다. (실제로 스펙이 이렇게 잘 정리되어 있는지는 처음 알았다) 대부분 chore나 feat, fix를 사용하는데에 그치는 정도지만, 일관성 있는 커밋 메시지는 협업과 개인 취향을 만족시킬 수 있다.

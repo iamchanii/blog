@@ -1,5 +1,6 @@
 ---
 title: "Can I Fish? - 모여봐요 동물의 숲 물고기 도감 개발 후기"
+date: "2020-04-06T13:25:54.000Z"
 ---
 
 [https://canifish.now.sh](https://canifish.now.sh/)

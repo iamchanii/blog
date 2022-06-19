@@ -5,12 +5,12 @@ import { make as ArticleListPage } from '../components/ArticleListPage.gen';
 export default ({ data }: PageProps<Queries.ArticleListPageQuery>) => {
   return (
     <ArticleListPage
-      data={data.allFile.nodes.map(node => ({
-        id: node.childMdx!.id,
-        frontmatter: node.childMdx!.frontmatter!,
-        slug: node.childMdx!.slug!,
-        date: node.birthTime,
-        content: node.childMdx!.excerpt,
+      data={data.allMdx.nodes.map(node => ({
+        id: node.id,
+        frontmatter: node.frontmatter!,
+        slug: node.slug!,
+        date: node.frontmatter!.date,
+        content: node.excerpt,
       }))}
     />
   );
@@ -18,20 +18,17 @@ export default ({ data }: PageProps<Queries.ArticleListPageQuery>) => {
 
 export const query = graphql`
   query ArticleListPage {
-    allFile(
-      filter: {childMdx: {id: {ne: null}}}
-      sort: {fields: birthTime, order: DESC}
+    allMdx(
+      sort: {fields: frontmatter___date, order: DESC}
     ) {
       nodes {
-        birthTime(formatString: "YYYY. MM. DD.")
-        childMdx {
-          id
-          slug
-          frontmatter {
-            title
-          }
-          excerpt(truncate: true, pruneLength: 150)
+        id
+        slug
+        frontmatter {
+          title
+          date(formatString: "YYYY. MM. DD.")
         }
+        excerpt(truncate: true, pruneLength: 150)
       }
     }
   }

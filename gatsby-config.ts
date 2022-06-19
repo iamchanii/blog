@@ -74,36 +74,31 @@ const config: GatsbyConfig = {
           {
             serialize: (
               {
-                query: { site, allFile },
+                query: { site, allMdx },
               }: {
-                query: { site: Queries.Site; allFile: Queries.FileConnection };
+                query: { site: Queries.Site; allMdx: Queries.MdxConnection };
               },
             ) =>
-              allFile.nodes.map((node) => {
-                const url = new URL(node.childMdx!.slug!, site.siteMetadata.siteUrl).toString();
+              allMdx.nodes.map((node) => {
+                const url = new URL(node.slug!, site.siteMetadata.siteUrl).toString();
 
-                return Object.assign({}, node.childMdx!.frontmatter, {
-                  description: node.childMdx!.excerpt,
-                  date: node.birthTime,
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
                   url,
                   guid: url,
                 });
               }),
             query: `#graphql
-              {
-                allFile(
-                  filter: {childMdx: {id: {ne: null}}}
-                  sort: {fields: birthTime, order: DESC}
+              query Feed {
+                allMdx(
+                  sort: {fields: frontmatter___date, order: DESC}
                 ) {
                   nodes {
-                    birthTime
-                    childMdx {
-                      excerpt(truncate: true, pruneLength: 150)
-                      # html
-                      slug
-                      frontmatter {
-                        title
-                      }
+                    excerpt(truncate: true, pruneLength: 150)
+                    slug
+                    frontmatter {
+                      title
+                      date
                     }
                   }
                 }

@@ -12,5 +12,10 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
       author: String!
       siteUrl: String!
     }
+
+    type MdxFrontmatter {
+      title: String!
+      date: Date! @dateformat
+    }
   `);
 };

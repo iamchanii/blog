@@ -1,5 +1,6 @@
 ---
 title: "FEConf2020 at Home 후기"
+date: "2020-10-31T13:25:54.000Z"
 ---
 
 10월 31일 오늘, [유투브 FEConf Korea 채널](https://www.youtube.com/channel/UCWEzfYIpFBIG5jh6laXC6hA)을 통해 [FEConf2020 at Home](https://2020.feconf.kr/) 컨퍼런스가 진행됐다. 언젠가 알림 신청 해두고서 이미 잊고 지낸지 좀 됐었는데, 운이 좋게도 다시 알 수 있게 되었고 덕분에 주말 한나절을 컨퍼런스 시청에 몰두했다.

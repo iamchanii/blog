@@ -1,5 +1,6 @@
 ---
 title: "Gatsby와 Contentful 연동하기"
+date: "2019-12-28T13:25:54.000Z"
 ---
 
 [이전 글](/posts/build-a-funny-homepage-with-tina-cms)에서도 말 했었지만, 워드프레스 기반을 벗어나서, Gatsby로 새롭게 회사 홈페이지를 만들고 있다. 그러다 보니 회사에서 Gatsby에 대해 시간을 많이 쏟아붓고 있다. 따로 정리하지 않으면 언젠가 까먹을 것 같기도 하고, 나처럼 Gatsby와 Contentful을 연동하려고 구글링 중인 사람에게 도움이 되었으면 좋겠다.

@@ -18,7 +18,7 @@ export const query = graphql`
   query ArticlePage ($id: String) {
     mdx(id: { eq: $id }) {
       slug
-      excerpt(pruneLength: 250)
+      excerpt(truncate: true, pruneLength: 150)
       frontmatter {
         title
       }

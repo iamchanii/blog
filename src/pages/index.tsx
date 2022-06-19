@@ -30,7 +30,7 @@ export const query = graphql`
           frontmatter {
             title
           }
-          excerpt(pruneLength: 250)
+          excerpt(truncate: true, pruneLength: 150)
         }
       }
     }

@@ -98,7 +98,7 @@ const config: GatsbyConfig = {
                   nodes {
                     birthTime
                     childMdx {
-                      excerpt
+                      excerpt(truncate: true, pruneLength: 150)
                       # html
                       slug
                       frontmatter {

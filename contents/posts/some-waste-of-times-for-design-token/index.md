@@ -112,4 +112,4 @@ title: "디자인 토큰 삽질기"
 
 # **Reference**
 
-* [Building a design system — where to start?](https://uxdesign.cc/building-a-design-system-where-to-start-part-1-first-things-first-57577153ae2d)
+- [Building a design system — where to start?](https://uxdesign.cc/building-a-design-system-where-to-start-part-1-first-things-first-57577153ae2d)

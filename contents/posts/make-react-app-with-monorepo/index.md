@@ -235,4 +235,4 @@ $ lerna run start --parallel
 
 ### References
 
-* <https://dev.to/stereobooster/typescript-monorepo-for-react-project-3cpa>
+- <https://dev.to/stereobooster/typescript-monorepo-for-react-project-3cpa>

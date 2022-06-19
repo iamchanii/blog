@@ -34,9 +34,9 @@ title: "Now를 사용하여 모노레포 프로젝트 배포하기"
 }
 ```
 
-* version은 사용하고자 하는 ZEIT Now의 플랫폼 버전을 뜻한다.
-* builds는 packages/app/build 폴더의 내용물을 @now/static을 사용한다는 것을 의미한다. @now/static을 사용하면 별도로 빌드 작업을 수행하지 않고 제공되는 파일 그대로 사용할수 있다.
-* routes는 요청 주소를 올바르게 매핑하기 위해 사용한다.
+- version은 사용하고자 하는 ZEIT Now의 플랫폼 버전을 뜻한다.
+- builds는 packages/app/build 폴더의 내용물을 @now/static을 사용한다는 것을 의미한다. @now/static을 사용하면 별도로 빌드 작업을 수행하지 않고 제공되는 파일 그대로 사용할수 있다.
+- routes는 요청 주소를 올바르게 매핑하기 위해 사용한다.
 
 # 배포
 

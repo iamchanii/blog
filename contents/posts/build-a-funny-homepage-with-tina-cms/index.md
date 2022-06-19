@@ -135,10 +135,10 @@ const IndexPage = () => {
 
 useLocalJsonForm의 두번째 인자는 옵션이다. 이 옵션을 사용하지 않아도 사진처럼 사용할 수 있지만,
 
-* 다양한 [필드](https://tinacms.org/docs/concepts/fields)를 사용할 수 없다. 오로지 text로 고정된다.
-* 필드가 표시되는 순서를 보장할 수 없다.
-* rawJson.path 처럼 노출되지 말아야 할 필드도 표시된다. 이걸 변경 해 버리면 작동하지 않는다.
-* rawJson.title 처럼 불친절한, 개발자 친화적인 문구가 표시된다.
+- 다양한 [필드](https://tinacms.org/docs/concepts/fields)를 사용할 수 없다. 오로지 text로 고정된다.
+- 필드가 표시되는 순서를 보장할 수 없다.
+- rawJson.path 처럼 노출되지 말아야 할 필드도 표시된다. 이걸 변경 해 버리면 작동하지 않는다.
+- rawJson.title 처럼 불친절한, 개발자 친화적인 문구가 표시된다.
 
 따라서 옵션을 사용하는 것이 바람직하다. 두번째 인자로 옵션을 추가했다.
 

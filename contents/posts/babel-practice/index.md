@@ -58,10 +58,10 @@ yarn add -D @babel/core @babel/cli \
 
 그래서 요리에 비유를 해보자면 다음과 같다.
 
-* @babel/core 코어 패키지는 **요리사**다. 재료와 레시피가 있다면 요리를 만들어낼 수 있는 기본기가 있다.
-* @babel/cli CLI 패키지는 **조리 도구**다. 간단한건 손으로도 할 수도 있지만 복잡한 요리를 편하게 하려면 조리 도구가 필요하다.
-* 플러그인 플러그인은 **레시피**이다. 재료를 손질하거나 요리하는 방법이 정리되어 있다.
-* 프리셋 프리셋은 **레시피 북**이다. 요리를 만들 때 참고할 수 있도록 여러 레시피를 모아둔 책이다. 참고로 최근에 가장 인기있는 레시피 북은 @babel/preset-env다.
+- @babel/core 코어 패키지는 **요리사**다. 재료와 레시피가 있다면 요리를 만들어낼 수 있는 기본기가 있다.
+- @babel/cli CLI 패키지는 **조리 도구**다. 간단한건 손으로도 할 수도 있지만 복잡한 요리를 편하게 하려면 조리 도구가 필요하다.
+- 플러그인 플러그인은 **레시피**이다. 재료를 손질하거나 요리하는 방법이 정리되어 있다.
+- 프리셋 프리셋은 **레시피 북**이다. 요리를 만들 때 참고할 수 있도록 여러 레시피를 모아둔 책이다. 참고로 최근에 가장 인기있는 레시피 북은 @babel/preset-env다.
 
 정리하자면, 기본적인 바벨 기능을 사용하려면 코어 패키지와 CLI 패키지를 설치하고, 필요한 플러그인이나 프리셋을 사용하면 된다. 여기에 웹팩과 같은 번들러를 사용하기 위해 로더가 필요한 것이지, 필수로 설치해야 하는 것이 아니다.
 
@@ -216,5 +216,5 @@ touch .babelrc.json
 
 대신 아래 두 링크를 남긴다. 최민호님이 벨로그에 작성 해 주신 글이다.
 
-* [모던 브라우저에도 꼭 ES5를 써야 할까?](https://velog.io/@vnthf/%EB%AA%A8%EB%8D%98%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EB%8F%84-%EA%BC%AD-es5%EB%A5%BC-%EC%8D%A8%EC%95%BC-%ED%95%A0%EA%B9%8C-Differential-Serving)
-* [corejs3로 대체하자](https://velog.io/@vnthf/corejs3%EB%A1%9C-%EB%8C%80%EC%B2%B4%ED%95%98%EC%9E%90-zok3p9aouy)
+- [모던 브라우저에도 꼭 ES5를 써야 할까?](https://velog.io/@vnthf/%EB%AA%A8%EB%8D%98%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80%EC%97%90%EB%8F%84-%EA%BC%AD-es5%EB%A5%BC-%EC%8D%A8%EC%95%BC-%ED%95%A0%EA%B9%8C-Differential-Serving)
+- [corejs3로 대체하자](https://velog.io/@vnthf/corejs3%EB%A1%9C-%EB%8C%80%EC%B2%B4%ED%95%98%EC%9E%90-zok3p9aouy)

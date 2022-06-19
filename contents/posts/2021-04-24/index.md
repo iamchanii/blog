@@ -40,5 +40,5 @@ QueryHelper 클래스는 React Query와 관련된 로직을 타입 세이프하�
 
 ### 참고 링크
 
-* https://react-query.tanstack.com/guides/query-keys
-* 궁금증 해소 & 코드 개선에 도움을 주신 [혜성](https://twitter.com/KrComet)님께 감사를 드립니다 :pray:
+- https://react-query.tanstack.com/guides/query-keys
+- 궁금증 해소 & 코드 개선에 도움을 주신 [혜성](https://twitter.com/KrComet)님께 감사를 드립니다 :pray:

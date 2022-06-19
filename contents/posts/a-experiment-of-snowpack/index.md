@@ -167,8 +167,8 @@ svgr을 사용하는 플러그인을 만들기 전에 Snowpack의 플러그인�
 
 [플러그인 문서](https://www.snowpack.dev/plugins)의 Overview에는 이렇게 나와있다.
 
-A**Snowpack Plugin**is an object interface that lets you customize Snowpack’s behavior. Snowpack provides different hooks for your plugin to connect to. For example, you can add a plugin to handle Svelte files, optimize CSS, convert SVGs to React components, run TypeScript during development, and much more.  
-  
+A**Snowpack Plugin**is an object interface that lets you customize Snowpack’s behavior. Snowpack provides different hooks for your plugin to connect to. For example, you can add a plugin to handle Svelte files, optimize CSS, convert SVGs to React components, run TypeScript during development, and much more.
+
 **Snowpack 플러그인**은 Snowpack의 동작을 커스터마이징 할 수 있게 해주는 오브젝트 인터페이스 입니다. Snowpack은 플러그인이 연결할 수 있도록 다양한 훅을 제공합니다. 예를 들면 Svelte 파일을 다루거나, CSS 최적화, SVG를 리액트 컴포넌트로 변환하거나, 개발 중 타입스크립트를 실행하는 등의 플러그인을 추가할 수 있습니다.
 
 위 내용의 예시로 언급되는 내용들이 웹팩의 구성 중 로더나 플러그인을 수정해야 할 수 있는 일들이다.

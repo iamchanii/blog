@@ -7,7 +7,7 @@
   "json": {},
   "markdown": {},
   "toml": {},
-  "includes": ["**/*.{ts,tsx,js,jsx,cjs,mjs,json,md,toml}"],
+  "includes": ["**/*.{ts,tsx,js,jsx,cjs,mjs,json,md,mdx,toml}"],
   "excludes": [
     "**/node_modules",
     "**/*-lock.json",

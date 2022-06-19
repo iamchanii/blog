@@ -76,5 +76,5 @@ flushPromises가 반환한 프로미스 자체만을 기다리는(await) 것 처
 
 ### **참고**
 
-* <https://github.com/testing-library/react-testing-library/issues/11>
-* <https://evan-moon.github.io/2019/08/01/nodejs-event-loop-workflow/>
+- <https://github.com/testing-library/react-testing-library/issues/11>
+- <https://evan-moon.github.io/2019/08/01/nodejs-event-loop-workflow/>

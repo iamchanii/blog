@@ -16,10 +16,10 @@ title: "Gatsby와 Contentful 연동하기"
 
 기본적인 사용법 설명은 생략하고, 아래 필드를 포함하는 콘텐츠 모델을 만들었다.
 
-* title 제목
-* slug /posts 이후의 주소
-* creation\_date 작성 일자
-* postBody 본문
+- title 제목
+- slug /posts 이후의 주소
+- creation\_date 작성 일자
+- postBody 본문
 
 > content라는 이름 대신 postBody를 사용한 이유는, content로 하니까 나중에 GraphQL 노드로 추가가 되지 않는다. 정확한 이유는 알 수 없다.
 
@@ -57,9 +57,9 @@ gatsby-config.js에 플러그인을 추가한다.
 
 연동에 필요한 spaceId와 accessToken을 환경 변수에서 가져오도록 했다. 공개 저장소에 노출되지 않기 위해 이런 방법으로 사용하는 것을 추천한다. Gatsby로 블로그를 만드는 경우, 지속적 배포 환경을 구성하는 것이 여러모로 이득이다.
 
-* GitHub Action을 사용한다면, GitHub 저장소 설정에서 Secrets에 저장한다.
-* Bitbucket을 사용한다면, Bitbucket 저장소 설정에서 Repository Variables나 Deployments 내의 각 환경에 알맞게 사용한다.
-* Netlify를 사용한다면, Netlify 사이트 설정에서 Build & Deploy -> Environtment에 저장한다.
+- GitHub Action을 사용한다면, GitHub 저장소 설정에서 Secrets에 저장한다.
+- Bitbucket을 사용한다면, Bitbucket 저장소 설정에서 Repository Variables나 Deployments 내의 각 환경에 알맞게 사용한다.
+- Netlify를 사용한다면, Netlify 사이트 설정에서 Build & Deploy -> Environtment에 저장한다.
 
 하지만 먼저 로컬에서 확인하는게 중요하므로, 프로젝트 루트 폴더에 .env.development와 .env.prodction 파일을 만들자.
 

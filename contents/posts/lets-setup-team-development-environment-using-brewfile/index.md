@@ -68,34 +68,34 @@ Brewfile 파일에서 앞부분에 적혀있는 tap, brew 그리고 cask에 대�
 
 #### tap
 
-* 먼저 탭에 대한 개념은 Homebrew 내의 기본 저장소(Formulae 라고도 함) 외의 서드 파티 저장소입니다.
-* brew tap 명령어를 입력하면 지금 내 맥북에 추가된 탭 목록을 확인할 수 있습니다.
-* brew tap <user/repo>를 입력하면 탭을 추가할 수 있고, brew install을 통해 설치할 때 해당 저장소를 사용할 수 있습니다.
-* 입력할 때 <user/repo>는 기본적으로 GitHub 저장소를 가정하고 추가되며, repo 이름은 homebrew-\*로 시작하는 저장소여야 하지만 실제로 추가할 때에는 homebrew-\* 접두사를 생략해도 됩니다. 실제로 homebrew/bundle라는 탭은 <https://github.com/homebrew/homebrew-bundle> 에서 내용을 확인할 수 있습니다.
+- 먼저 탭에 대한 개념은 Homebrew 내의 기본 저장소(Formulae 라고도 함) 외의 서드 파티 저장소입니다.
+- brew tap 명령어를 입력하면 지금 내 맥북에 추가된 탭 목록을 확인할 수 있습니다.
+- brew tap <user/repo>를 입력하면 탭을 추가할 수 있고, brew install을 통해 설치할 때 해당 저장소를 사용할 수 있습니다.
+- 입력할 때 <user/repo>는 기본적으로 GitHub 저장소를 가정하고 추가되며, repo 이름은 homebrew-\*로 시작하는 저장소여야 하지만 실제로 추가할 때에는 homebrew-\* 접두사를 생략해도 됩니다. 실제로 homebrew/bundle라는 탭은 <https://github.com/homebrew/homebrew-bundle> 에서 내용을 확인할 수 있습니다.
 
 #### brew
 
-* brew "package\_name"은 해당 패키지를 설치합니다. 기본 저장소를 포함하여 추가된 탭을 참조합니다.
+- brew "package\_name"은 해당 패키지를 설치합니다. 기본 저장소를 포함하여 추가된 탭을 참조합니다.
 
 #### cask
 
-* cask는 Homebrew로 설치하지 않는, 외부 애플리케이션을 설치할 수 있습니다.
+- cask는 Homebrew로 설치하지 않는, 외부 애플리케이션을 설치할 수 있습니다.
 
 #### mas
 
-* 추가적으로 mas를 사용할 수 있습니다. mas는 App Store에서 설치할 수 있는 애플리케이션을 명령어로 설치할 수 있습니다.
+- 추가적으로 mas를 사용할 수 있습니다. mas는 App Store에서 설치할 수 있는 애플리케이션을 명령어로 설치할 수 있습니다.
 
 ### 플러스티브이 개발팀은 어떤 패키지를 사용할까?
 
 간단하게 플러스티브이 개발팀에서 개발 환경을 구성할 때 설치하는 패키지 및 애플리케이션을 정리 해 보자면,
 
-* docker: 플러스티브이 개발팀은 도커를 사용하여 로컬 개발 환경을 구성합니다.
-* python3: 플러스티브이 디지털 사이니지 솔루션의 백엔드는 파이썬(플라스크)를 사용하여 개발하였습니다. 릴리즈 된 도커 이미지로 로컬에서 실행하지만, 일부 스크립트를 실행하려면 파이썬이 필요합니다.
-* node@10, yarn
-* awscli: 현재 AWS 클라우드를 사용하고 있어서 배포하기 위해 awscli 를 설치합니다.
-* git-flow-avh: 플러스티브이 개발팀은 Git-Flow 를 일부 채택한 버전 관리를 하고 있습니다.
-* mysql@8
-* iterm2, google-chrome, zeplin, slack
+- docker: 플러스티브이 개발팀은 도커를 사용하여 로컬 개발 환경을 구성합니다.
+- python3: 플러스티브이 디지털 사이니지 솔루션의 백엔드는 파이썬(플라스크)를 사용하여 개발하였습니다. 릴리즈 된 도커 이미지로 로컬에서 실행하지만, 일부 스크립트를 실행하려면 파이썬이 필요합니다.
+- node@10, yarn
+- awscli: 현재 AWS 클라우드를 사용하고 있어서 배포하기 위해 awscli 를 설치합니다.
+- git-flow-avh: 플러스티브이 개발팀은 Git-Flow 를 일부 채택한 버전 관리를 하고 있습니다.
+- mysql@8
+- iterm2, google-chrome, zeplin, slack
 
 그 외, 플러스티브이 개발팀은 InteliJ IDE를 공통적으로 사용하기 때문에 프론트엔드는 WebStorm을, 백엔드는 PyCharm을 설치합니다.
 
@@ -251,10 +251,10 @@ $ chmod +x ./common.sh
 
 ## References
 
-* [Homebrew 로 Mac 한 방에 셋업하기](https://healingpaper.github.io/2019/08/18/brew%5Fcask%5Fmas.html)
-* [A complete one-by-one guide to install Docker on your Mac OS using Homebrew](https://medium.com/@yutafujii%5F59175/a-complete-one-by-one-guide-to-install-docker-on-your-mac-os-using-homebrew-e818eb4cfc3)
-* [Adding a Cask](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding%5Fa%5Fcask.md)
-* <https://support.apple.com/ko-kr/HT201940>
-* <https://stackoverflow.com/a/49580997>
-* <https://github.com/Homebrew/homebrew-bundle#install>
-* [Mac on Mac Virtualization](https://engineering.rallyhealth.com/tools/mac/virtualization/2018/04/27/mac-on-mac-virtualization.html)
+- [Homebrew 로 Mac 한 방에 셋업하기](https://healingpaper.github.io/2019/08/18/brew%5Fcask%5Fmas.html)
+- [A complete one-by-one guide to install Docker on your Mac OS using Homebrew](https://medium.com/@yutafujii%5F59175/a-complete-one-by-one-guide-to-install-docker-on-your-mac-os-using-homebrew-e818eb4cfc3)
+- [Adding a Cask](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding%5Fa%5Fcask.md)
+- <https://support.apple.com/ko-kr/HT201940>
+- <https://stackoverflow.com/a/49580997>
+- <https://github.com/Homebrew/homebrew-bundle#install>
+- [Mac on Mac Virtualization](https://engineering.rallyhealth.com/tools/mac/virtualization/2018/04/27/mac-on-mac-virtualization.html)

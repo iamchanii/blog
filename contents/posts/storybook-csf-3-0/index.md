@@ -62,5 +62,5 @@ CSF로 스토리를 쓰는 것도 충분히 간결했다고 생각했는데, CSF
 
 ###### 출처
 
-* <https://storybook.js.org/blog/component-story-format/>
-* <https://storybook.js.org/blog/component-story-format-3-0/>
+- <https://storybook.js.org/blog/component-story-format/>
+- <https://storybook.js.org/blog/component-story-format-3-0/>

@@ -10,6 +10,8 @@ export default ({ data }: PageProps<Queries.ArticlePageQuery>) => {
       body={data.mdx!.body as any}
       description={data.mdx!.excerpt}
       url={data.mdx!.slug!}
+      isoDate={(data.mdx!.parent as any).isoDate}
+      wordCount={data.mdx!.wordCount!.words!}
     />
   );
 };
@@ -26,7 +28,11 @@ export const query = graphql`
       parent {
         ... on File {
           birthTime(formatString: "YYYY. MM. DD")
+          isoDate: birthTime
         }
+      }
+      wordCount {
+        words
       }
     }
   }

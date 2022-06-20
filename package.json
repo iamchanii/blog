@@ -18,7 +18,7 @@
     "re:clean": "rescript clean",
     "re:build": "rescript build",
     "re:watch": "rescript build -w",
-    "gen:content": "deno run --allow-read --allow-write src/scripts/CreateContent.bs.js"
+    "gen:content": "deno run -A src/scripts/create_content.bs.js"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6",

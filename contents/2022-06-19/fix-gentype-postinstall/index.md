@@ -72,26 +72,26 @@ $ yarn patch gentype
 `postinstall.js` 내부의 `renameSync`를 `copyFileSync`로 바꾸는게 가장 간단하지만, 그러면 바이너리 하나 만큼의 크기가 계속 차지하기 때문에, 복사하려는 위치에 바이너리가 있는 경우에 대한 분기를 추가했다.
 
 ```diff
-function movePlatformBinary(platform) {
-  const sourcePath = getPlatformBinaryPath(platform);
+ function movePlatformBinary(platform) {
+   const sourcePath = getPlatformBinaryPath(platform);
  
-- if(!fs.existsSync(sourcePath)) {
--   return fail("error: executable not found: " + sourcePath);
-+ if (fs.existsSync(sourcePath)) {
-+   fs.renameSync(sourcePath, targetPath);
-+   fs.chmodSync(targetPath, 0777);
-+   return;
-+ }
+-  if(!fs.existsSync(sourcePath)) {
+-    return fail("error: executable not found: " + sourcePath);
++  if (fs.existsSync(sourcePath)) {
++    fs.renameSync(sourcePath, targetPath);
++    fs.chmodSync(targetPath, 0777);
++    return;
++  }
 + 
-+ if (fs.existsSync(targetPath)) {
++  if (fs.existsSync(targetPath)) {
 +    const text = fs.readFileSync(targetPath, { encoding: 'utf8' });
 +    if (/gentype was not installed correctly/.test(text)) {
-+       return fail('error: executable not found: ' + sourcePath);
++      return fail('error: executable not found: ' + sourcePath);
 +    }
    }
 -  fs.renameSync(sourcePath, targetPath);
 -  fs.chmodSync(targetPath, 0777);
- }
+  }
 ```
 
 이후 `yarn patch-commit`[^2]을 통해 변경 사항을 저장해주면, `package.json` 파일에 `resolutions`[^3] 항목이 추가된다. 이 항목에 의해, gentype 패키지는 변경 사항이 적용된 패키지가 설치된다.
@@ -99,7 +99,7 @@ function movePlatformBinary(platform) {
 [^2]: https://yarnpkg.com/cli/patch-commit
 [^3]: https://yarnpkg.com/configuration/manifest#resolutions
 
-```
+```shell
 yarn patch-commit -s /private/var/folders/gl/.../user
 ```
 

@@ -143,32 +143,12 @@
       @apply mt-8 mb-4 border-slate-100 dark:border-slate-600;
     }
 
-    & ol {
-      /* padding-left: 16px; */
+    & .footnote-backref {
+      @apply ml-1;
     }
 
-    & li {
-      /* position: relative; */
-    }
-
-    & li:target::before {
-      /* position: absolute;
-      top: -8px;
-      right: -8px;
-      bottom: -8px;
-      left: -24px;
-      pointer-events: none;
-      content: '';
-      border: 2px solid #0969da;
-      border-radius: 6px; */
-    }
-
-    & li:target {
-      /* color: #24292f; */
-    }
-
-    & .data-footnote-backref g-emoji {
-      /* font-family: monospace; */
+    & a {
+      @apply break-words;
     }
   }
 
@@ -181,6 +161,6 @@
   }
 
   & :not(pre) > code[class*='language-'] {
-    @apply mx-1 px-1;
+    @apply mx-1 px-1 break-all;
   }
 }

@@ -70,6 +70,10 @@ const config: GatsbyConfig = {
             }
           }
         `,
+        setup: (options: any) => ({
+          ...options,
+          site_url: metadata.siteUrl,
+        }),
         feeds: [
           {
             serialize: (
@@ -106,6 +110,7 @@ const config: GatsbyConfig = {
             `,
             output: 'rss.xml',
             title: `${metadata.title} RSS Feed'`,
+            match: '/posts/',
             link: metadata.siteUrl,
           },
         ],

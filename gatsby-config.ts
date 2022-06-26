@@ -80,7 +80,7 @@ const config: GatsbyConfig = {
               },
             ) =>
               allMdx.nodes.map((node) => {
-                const url = new URL(node.slug!, site.siteMetadata.siteUrl).toString();
+                const url = new URL(`posts/${node.slug}`, site.siteMetadata.siteUrl).toString();
 
                 return Object.assign({}, node.frontmatter, {
                   description: node.excerpt,

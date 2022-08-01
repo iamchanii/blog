@@ -4,7 +4,7 @@ let make = (~title, ~date, ~body, ~description, ~url, ~isoDate, ~wordCount) => {
     let info = "mb-6"
     let title = "font-bold text-3xl"
     let date = "text-sm"
-    let article = "prose prose-slate dark:prose-invert prose-a:text-primary dark:prose-a:text-primary-dark prose-a:no-underline"
+    let article = "prose prose-slate lg:prose-lg dark:prose-invert prose-a:text-primary dark:prose-a:text-primary-dark prose-a:no-underline max-w-none"
   }
 
   <Layout className="py-4">

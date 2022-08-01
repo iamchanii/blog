@@ -11,6 +11,14 @@ type experience = {
 let make = () => {
   let experiences = [
     {
+      orgName: `스매치 코퍼레이션`,
+      fromDate: "2022.07",
+      endDate: "",
+      items: [
+        Text(`스매치 코퍼레이션의 신규 프로덕트를 개발하고 기존 프로덕트의 유지보수를 진행하고 있습니다.`),
+      ],
+    },
+    {
       orgName: `다노`,
       fromDate: "2020.04",
       endDate: "2022.05",
@@ -29,6 +37,10 @@ let make = () => {
         TextWithLink(
           `React Query를 쉽게 사용할 수 있는 라이브러리를 오픈소스로 공개했습니다.`,
           "https://github.com/dano-inc/react-query-helper",
+        ),
+        TextWithLink(
+          `다노의 여러 프로덕트를 관리하기 위한 어드민을 Remix 프레임워크로 개발했습니다.`,
+          "https://imch.dev/posts/2022-03-13/",
         ),
       ],
     },

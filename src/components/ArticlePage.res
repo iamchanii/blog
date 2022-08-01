@@ -1,11 +1,10 @@
-%%raw(`import '../styles/mdx.css';`)
-
 @react.component @genType
 let make = (~title, ~date, ~body, ~description, ~url, ~isoDate, ~wordCount) => {
   module Styles = {
     let info = "mb-6"
     let title = "font-bold text-3xl"
     let date = "text-sm"
+    let article = "prose prose-slate dark:prose-invert prose-a:text-primary dark:prose-a:text-primary-dark prose-a:no-underline"
   }
 
   <Layout className="py-4">
@@ -15,7 +14,9 @@ let make = (~title, ~date, ~body, ~description, ~url, ~isoDate, ~wordCount) => {
       <h1 className=Styles.title> {title->React.string} </h1>
       <time className=Styles.date> {date->React.string} </time>
     </div>
-    <div id="mdx"> <Gatsby.MDXRenderer> {body} </Gatsby.MDXRenderer> </div>
+    <article className={Styles.article}>
+      <Gatsby.MDXRenderer> {body} </Gatsby.MDXRenderer>
+    </article>
     <Profile.Article />
   </Layout>
 }

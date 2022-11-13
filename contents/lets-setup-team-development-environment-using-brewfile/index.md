@@ -71,8 +71,8 @@ Brewfile 파일에서 앞부분에 적혀있는 tap, brew 그리고 cask에 대�
 
 - 먼저 탭에 대한 개념은 Homebrew 내의 기본 저장소(Formulae 라고도 함) 외의 서드 파티 저장소입니다.
 - brew tap 명령어를 입력하면 지금 내 맥북에 추가된 탭 목록을 확인할 수 있습니다.
-- brew tap <user/repo>를 입력하면 탭을 추가할 수 있고, brew install을 통해 설치할 때 해당 저장소를 사용할 수 있습니다.
-- 입력할 때 <user/repo>는 기본적으로 GitHub 저장소를 가정하고 추가되며, repo 이름은 homebrew-\*로 시작하는 저장소여야 하지만 실제로 추가할 때에는 homebrew-\* 접두사를 생략해도 됩니다. 실제로 homebrew/bundle라는 탭은 <https://github.com/homebrew/homebrew-bundle> 에서 내용을 확인할 수 있습니다.
+- brew tap `<user/repo>`를 입력하면 탭을 추가할 수 있고, brew install을 통해 설치할 때 해당 저장소를 사용할 수 있습니다.
+- 입력할 때 `<user/repo>`는 기본적으로 GitHub 저장소를 가정하고 추가되며, repo 이름은 homebrew-\*로 시작하는 저장소여야 하지만 실제로 추가할 때에는 homebrew-\* 접두사를 생략해도 됩니다. 실제로 homebrew/bundle라는 탭은 https://github.com/homebrew/homebrew-bundle 에서 내용을 확인할 수 있습니다.
 
 #### brew
 
@@ -255,7 +255,7 @@ $ chmod +x ./common.sh
 - [Homebrew 로 Mac 한 방에 셋업하기](https://healingpaper.github.io/2019/08/18/brew%5Fcask%5Fmas.html)
 - [A complete one-by-one guide to install Docker on your Mac OS using Homebrew](https://medium.com/@yutafujii%5F59175/a-complete-one-by-one-guide-to-install-docker-on-your-mac-os-using-homebrew-e818eb4cfc3)
 - [Adding a Cask](https://github.com/Homebrew/homebrew-cask/blob/master/doc/development/adding%5Fa%5Fcask.md)
-- <https://support.apple.com/ko-kr/HT201940>
-- <https://stackoverflow.com/a/49580997>
-- <https://github.com/Homebrew/homebrew-bundle#install>
+- https://support.apple.com/ko-kr/HT201940
+- https://stackoverflow.com/a/49580997
+- https://github.com/Homebrew/homebrew-bundle#install
 - [Mac on Mac Virtualization](https://engineering.rallyhealth.com/tools/mac/virtualization/2018/04/27/mac-on-mac-virtualization.html)

@@ -61,9 +61,7 @@ function movePlatformBinary(platform) {
 
 내 생각에는 `node_modules`가 캐싱이 되지만 `node_modules/.yarn-state.yml`은 캐싱이 안되는게 아닐까? 그래서 매번 빌드할 때 마다 링킹을 시도하는데, `node_modules/gentype/{platform}/gentype.exe`가 없는 상태로 캐싱이 되어서 `executable not found`를 뱉는 것 같다.
 
-이 가설을 검증하기 위해 gentype의 `postinstall.js` 파일을 수정하기로 했다. `yarn patch`[^1]를 활용해서 gentype 패키지를 수정했다.
-
-[^1]: https://yarnpkg.com/cli/patch
+이 가설을 검증하기 위해 gentype의 `postinstall.js` 파일을 수정하기로 했다. `yarn patch`를 활용해서 gentype 패키지를 수정했다.
 
 ```
 $ yarn patch gentype
@@ -94,10 +92,7 @@ $ yarn patch gentype
   }
 ```
 
-이후 `yarn patch-commit`[^2]을 통해 변경 사항을 저장해주면, `package.json` 파일에 `resolutions`[^3] 항목이 추가된다. 이 항목에 의해, gentype 패키지는 변경 사항이 적용된 패키지가 설치된다.
-
-[^2]: https://yarnpkg.com/cli/patch-commit
-[^3]: https://yarnpkg.com/configuration/manifest#resolutions
+이후 `yarn patch-commit`을 통해 변경 사항을 저장해주면, `package.json` 파일에 `resolutions` 항목이 추가된다. 이 항목에 의해, gentype 패키지는 변경 사항이 적용된 패키지가 설치된다.
 
 ```shell
 yarn patch-commit -s /private/var/folders/gl/.../user

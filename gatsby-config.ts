@@ -50,7 +50,12 @@ const config: GatsbyConfig = {
               maxWidth: 640,
             },
           },
-          'gatsby-remark-prismjs',
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              noInlineHighlight: true,
+            },
+          },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
         ],
@@ -95,10 +100,10 @@ const config: GatsbyConfig = {
             query: `#graphql
               query Feed {
                 allMdx(
-                  sort: {fields: frontmatter___date, order: DESC}
+                  sort: { frontmatter: { date: DESC } }
                 ) {
                   nodes {
-                    excerpt(truncate: true, pruneLength: 150)
+                    excerpt(pruneLength: 150)
                     slug
                     frontmatter {
                       title

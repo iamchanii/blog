@@ -188,7 +188,7 @@ $ lerna add @foo/shared --scope=@foo/app
 $ yarn workspace @foo/shared build
 ```
 
-그러면 정상적으로 @foo/shared 패키지에서 만든 컴포넌트가 표시되는 것을 확인할 수 있습니다. 여전히 오류가 발생한다면 import { ... } from '@foo/shared/src' 처럼 경로를 확인해야 합니다.
+그러면 정상적으로 @foo/shared 패키지에서 만든 컴포넌트가 표시되는 것을 확인할 수 있습니다. 여전히 오류가 발생한다면 `import { ... } from '@foo/shared/src'` 처럼 경로를 확인해야 합니다.
 
 ![](03b34d35-bf98-4a9f-9501-d4d9afc68ef5_2.png)
 
@@ -236,4 +236,4 @@ $ lerna run start --parallel
 
 ### References
 
-- <https://dev.to/stereobooster/typescript-monorepo-for-react-project-3cpa>
+- https://dev.to/stereobooster/typescript-monorepo-for-react-project-3cpa

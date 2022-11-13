@@ -116,7 +116,7 @@ export default new Environment({
 
 ### **도움 될 만한 글(과 영상)**
 
-- <https://relay.dev/docs/en/experimental/step-by-step>
-- <https://www.graphql-tools.com/docs/introduction/>
-- <https://blog.cometkim.kr/posts/graphql-is-not-just-a-network-protocol/>
-- <https://hasura.io/blog/client-side-graphql-schema-resolving-and-schema-stitching-f4d8bccc42d2/>
+- https://relay.dev/docs/en/experimental/step-by-step
+- https://www.graphql-tools.com/docs/introduction/
+- https://blog.cometkim.kr/posts/graphql-is-not-just-a-network-protocol/
+- https://hasura.io/blog/client-side-graphql-schema-resolving-and-schema-stitching-f4d8bccc42d2/

@@ -8,9 +8,9 @@ export default ({ data }: PageProps<Queries.ArticleListPageQuery>) => {
       data={data.allMdx.nodes.map(node => ({
         id: node.id,
         frontmatter: node.frontmatter!,
-        slug: node.slug!,
+        slug: node.fields?.slug!,
         date: node.frontmatter!.date,
-        content: node.excerpt,
+        content: node.excerpt!,
       }))}
     />
   );
@@ -19,16 +19,18 @@ export default ({ data }: PageProps<Queries.ArticleListPageQuery>) => {
 export const query = graphql`
   query ArticleListPage {
     allMdx(
-      sort: {fields: frontmatter___date, order: DESC}
+      sort: {frontmatter: {date: DESC}}
     ) {
       nodes {
         id
-        slug
+        fields {
+          slug
+        }
         frontmatter {
           title
           date(formatString: "YYYY. MM. DD.")
         }
-        excerpt(truncate: true, pruneLength: 150)
+        excerpt(pruneLength: 150)
       }
     }
   }

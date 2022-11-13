@@ -7,7 +7,7 @@ Webpack, Framer, Preact, Reach UI를 연습 삼아 간단하게 사용 해 봤�
 
 # **TL;DR**
 
-전체 코드는 <https://github.com/iamchanii/preact-framer-motion-modal> 에서 확인할 수 있다. 그런데 이 글에서 코드에 대한 이야기는 하지 않는다. (그냥 궁금하면 봐 주시라)
+전체 코드는 https://github.com/iamchanii/preact-framer-motion-modal 에서 확인할 수 있다. 그런데 이 글에서 코드에 대한 이야기는 하지 않는다. (그냥 궁금하면 봐 주시라)
 
 ---
 

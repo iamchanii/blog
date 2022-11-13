@@ -165,4 +165,4 @@ it('콘텐츠 목록을 불러와서 표시할 수 있다.', async () => {
 
 ### **Reference**
 
-- <https://stackoverflow.com/questions/36734900/what-happens-if-you-dont-resolve-or-reject-a-promise>
+- https://stackoverflow.com/questions/36734900/what-happens-if-you-dont-resolve-or-reject-a-promise

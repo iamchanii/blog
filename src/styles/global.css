@@ -5,3 +5,7 @@
 html {
   @apply bg-transparent dark:bg-slate-800;
 }
+
+article .gatsby-highlight {
+  @apply -mx-4;
+}

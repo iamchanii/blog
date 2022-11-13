@@ -21,7 +21,7 @@ let make = (~className="", ~children) => {
   open SiteMetadata
 
   module Styles = {
-    let main = "max-w-screen-md lg:max-w-screen-lg mx-auto leading-relaxed text-slate-800 dark:text-slate-300 mb-16"
+    let main = "max-w-screen-md mx-auto leading-relaxed text-slate-800 dark:text-slate-300 mb-16"
     let footer = "text-center text-xs text-slate-500 mt-16"
     let section = "px-4 mx-4"
   }

@@ -109,7 +109,7 @@ if (process.env.NODE_ENV === 'development') {
 이 상태로 다시 실행해보면 예상과 달리 모킹이 되지 않는다. 콘솔을 확인 해 보니 아래와 같은 오류가 표시되었다.
 
 **\[MSW\]** Failed to register a Service Worker:\
-mFailed to register a ServiceWorker for scope ('<http://localhost:3000/'>) with script ('<http://localhost:3000/mockServiceWorker.js'>): The script has an unsupported MIME type ('text/html').
+mFailed to register a ServiceWorker for scope (http://localhost:3000/) with script (http://localhost:3000/mockServiceWorker.js): The script has an unsupported MIME type ('text/html').
 
 서비스 워커를 등록하려 했는데 현재 프로젝트에는 mockServiceWorker.js라는 파일이 없기 때문이다. MSW는 브라우저에서 사용할 수 있는 서비스 워커 코드를 만들기 위한 명령어를 제공한다.
 

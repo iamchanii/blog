@@ -16,10 +16,13 @@ let make = (~data) => {
 
   let nodeToElement = x => {
     <ArticleListItem
-      key=x.id title=x.frontmatter.title date=x.date content=x.content slug={`/posts/${x.slug}`}
+      key=x.id title=x.frontmatter.title date=x.date content=x.content slug={`/posts${x.slug}`}
     />
   }
   let nodes = data->Js.Array2.map(nodeToElement)->React.array
 
-  <Layout> <Meta title="Home" /> <div className=Styles.list> {nodes} </div> </Layout>
+  <Layout>
+    <Meta title="Home" />
+    <div className=Styles.list> {nodes} </div>
+  </Layout>
 }

@@ -33,7 +33,7 @@ const LatestPostListQuery = graphql`
     allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
       edges {
         node {
-          excerpt(truncate: true, pruneLength: 200)
+          excerpt(pruneLength: 200)
           frontmatter {
             title
             path
@@ -116,7 +116,7 @@ const PostTemplate: React.FC<IPostTemplateProps> = React.memo(props => {
 
 utterances 위젯을 사용하기 위해서는 GitHub에 공개된 저장소를 만들어야 합니다. 저는 추후에 blog 라는 이름으로 업로드 할 예정이기 때문에, blog 라는 이름으로 저장소를 만들었습니다. 그 다음 [https://utteranc.es](https://utteranc.es/) 에서 GitHub 앱을 설치합니다. 테마나 이슈 연결 방식에 대한 설정은 해당 사이트 내에서 설정할 수 있습니다.
 
-그러면 붙여 넣을 수 있는 <script ...> 코드가 표시되는데, 이 코드를 Gatsby 내 어딘가에 그대로 붙여넣어도 작동하지 않습니다. 이는 리액트의 보안과 관련이 되어 있는데요, 리액트가 script element 를 생성해도 브라우저에서 실행되지 않습니다. 따라서, utterances 위젯을 추가하기 위해서 window.createElement API 와 appendChild 메소드를 사용해야 합니다.
+그러면 붙여 넣을 수 있는 `<script>` 코드가 표시되는데, 이 코드를 Gatsby 내 어딘가에 그대로 붙여넣어도 작동하지 않습니다. 이는 리액트의 보안과 관련이 되어 있는데요, 리액트가 script element 를 생성해도 브라우저에서 실행되지 않습니다. 따라서, utterances 위젯을 추가하기 위해서 window.createElement API 와 appendChild 메소드를 사용해야 합니다.
 
 ### 컴포넌트 작성
 

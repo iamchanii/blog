@@ -281,8 +281,13 @@ div.code-toolbar > .toolbar.toolbar > .toolbar-item > span:focus {
 
 /* Line Highlight plugin overrides */
 /* The highlighted line itself */
-.line-highlight.line-highlight {
+.gatsby-highlight-code-line {
   background: hsla(230, 8%, 24%, 0.05);
+  display: block;
+  margin-left: -1em;
+  margin-right: -1em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 /* Default line numbers in Line Highlight plugin */

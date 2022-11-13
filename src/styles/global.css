@@ -7,5 +7,9 @@ html {
 }
 
 article .gatsby-highlight {
-  @apply -mx-4;
+  @apply -mx-4 rounded-lg;
+}
+
+.gatsby-resp-image-wrapper {
+  @apply drop-shadow-sm hover:drop-shadow-md transition-shadow rounded-lg overflow-hidden;
 }

@@ -149,7 +149,7 @@ const { result, waitForNextUpdate } = renderHook(
 );
 ```
 
-이제 테스트 케이스를 작성하면 된다. 매번 <RecoilRoot>...</RecoilRoot>를 작성하는게 번거로우니 별도의 함수로 추출하기로 했다.
+이제 테스트 케이스를 작성하면 된다. 매번 `<RecoilRoot>...</RecoilRoot>`를 작성하는게 번거로우니 별도의 함수로 추출하기로 했다.
 
 ```
 const renderRecoilValue = <T extends Object>(

@@ -89,7 +89,7 @@ const config: GatsbyConfig = {
               },
             ) =>
               allMdx.nodes.map((node) => {
-                const url = new URL(`posts/${node.slug}`, site.siteMetadata.siteUrl).toString();
+                const url = new URL(`posts/${node.fields?.slug}`, site.siteMetadata.siteUrl).toString();
 
                 return Object.assign({}, node.frontmatter, {
                   description: node.excerpt,
@@ -104,7 +104,9 @@ const config: GatsbyConfig = {
                 ) {
                   nodes {
                     excerpt(pruneLength: 150)
-                    slug
+                    fields {
+                      slug
+                    }
                     frontmatter {
                       title
                       date

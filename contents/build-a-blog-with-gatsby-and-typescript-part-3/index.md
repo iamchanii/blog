@@ -97,7 +97,7 @@ export async function createPages({ actions, graphql }: CreatePagesArgs) {
 
 ![](b93ae81d-d79b-432b-bb2a-2d95b108a268_intellisense-working.gif)
 
-이제 아래에 써 놓았던 ({ node }): any 의 any 타입은 삭제해도 됩니다!
+이제 아래에 써 놓았던 `({ node }): any` 의 any 타입은 삭제해도 됩니다!
 
 ## 템플릿 컴포넌트의 Props 타입 지정
 

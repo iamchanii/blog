@@ -15,7 +15,16 @@ let make = () => {
       fromDate: "2022.07",
       endDate: "",
       items: [
-        Text(`스매치 코퍼레이션의 신규 프로덕트를 개발하고 기존 프로덕트의 유지보수를 진행하고 있습니다.`),
+        Text(`스매치 코퍼레이션의 스매치 제품팀에서 프론트엔드 엔지니어로 일하고 있습니다.`),
+        Text(`Tailwind CSS와 Radix UI를 사용하여 스매치 제품팀의 디자인 시스템을 개발했습니다.`),
+        Text(`스매치 제품 내에서 사용하는 아이콘들을 리액트 컴포넌트 패키지로 만들어서 사용했습니다. 아이콘을 가져와서 패키지로 게시하는 과정을 자동화했습니다.`),
+        Text(`Pothos를 사용하여 스매치 제품에서 사용할 수 있는 GraphQL 서버를 개발했습니다.`),
+        Text(`일부 인프라 리소스를 Terraform 으로 관리하고, 기존 EC2 기반의 배포 환경을 ECS 기반의 배포 환경으로 마이그레이션 했습니다.`),
+        Text(`온드 미디어 마케팅 목적으로 사용하기 위한 스매치 인사이트 프로젝트를 진행했습니다. Next.js 13 App Router와 Prismic CMS를 사용했습니다.`),
+        TextWithLink(
+          `오픈소스 프로젝트: Pothos GraphQL과 Effect를 쉽게 사용할 수 있도록 도와주는 라이브러리를 개발했습니다.`,
+          "https://github.com/iamchanii/pothos-plugin-effect",
+        ),
       ],
     },
     {
@@ -78,7 +87,8 @@ let make = () => {
     <li key={index->Js.Int.toString}>
       {switch item {
       | Text(x) => x->React.string
-      | TextWithLink(x, href) => <>
+      | TextWithLink(x, href) =>
+        <>
           {`${x} `->React.string}
           <a href target="_blank" className=Styles.link> {`(링크)`->React.string} </a>
         </>
@@ -97,7 +107,10 @@ let make = () => {
     <li key={index->Js.Int.toString}>
       <header className=Styles.header>
         <h3 className=Styles.orgName> {orgName->React.string} </h3>
-        <aside className=Styles.range> {`${fromDate} ~ ${endDate}`->React.string} <span /> </aside>
+        <aside className=Styles.range>
+          {`${fromDate} ~ ${endDate}`->React.string}
+          <span />
+        </aside>
       </header>
       <ul className=Styles.items> {items->Js.Array2.mapi(itemToElement)->React.array} </ul>
     </li>

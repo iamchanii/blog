@@ -17,10 +17,14 @@ let make = () => {
       items: [
         Text(`스매치 코퍼레이션의 스매치 제품팀에서 프론트엔드 엔지니어로 일하고 있습니다.`),
         Text(`Tailwind CSS와 Radix UI를 사용하여 스매치 제품팀의 디자인 시스템을 개발했습니다.`),
-        Text(`스매치 제품 내에서 사용하는 아이콘들을 리액트 컴포넌트 패키지로 만들어서 사용했습니다. 아이콘을 가져와서 패키지로 게시하는 과정을 자동화했습니다.`),
+        TextWithLink(
+          `Figma에 등록된 아이콘 컴포넌트를 리액트 컴포넌트 패키지로 만드는 과정을 자동화했습니다.`,
+          "https://github.com/smatch-corp/react-icons",
+        ),
         Text(`Pothos를 사용하여 스매치 제품에서 사용할 수 있는 GraphQL 서버를 개발했습니다.`),
         Text(`일부 인프라 리소스를 Terraform 으로 관리하고, 기존 EC2 기반의 배포 환경을 ECS 기반의 배포 환경으로 마이그레이션 했습니다.`),
-        Text(`온드 미디어 마케팅 목적으로 사용하기 위한 스매치 인사이트 프로젝트를 진행했습니다. Next.js 13 App Router와 Prismic CMS를 사용했습니다.`),
+        Text(`ECS 클러스터 별 서비스의 메트릭을 보고 이상 지표 발생 시 알람을 받을 수 있도록 Grafana 환경을 구성했습니다.`),
+        Text(`Next.js 13 (w/ App Router)와 Prismic CMS를 사용하여 온드 미디어 마케팅 목적으로 사용하기 위한 스매치 인사이트 프로젝트를 진행했습니다.`),
         TextWithLink(
           `오픈소스 프로젝트: Pothos GraphQL과 Effect를 쉽게 사용할 수 있도록 도와주는 라이브러리를 개발했습니다.`,
           "https://github.com/iamchanii/pothos-plugin-effect",

@@ -1,6 +1,6 @@
 let name = `이찬희`
 let description = `
-    프론트엔드 엔지니어 이찬희 입니다. 리액트와 타입스크립트를 주로 사용합니다. 현재 스매치 코퍼레이션에서 재직중입니다.
+    프론트엔드 엔지니어 이찬희 입니다. 리액트와 타입스크립트를 주로 사용합니다. 현재 당근에서 재직중입니다.
   `
 let githubUrl = "https://github.com/iamchanii"
 let githubAvatar = `${githubUrl}.png`

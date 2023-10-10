@@ -11,9 +11,17 @@ type experience = {
 let make = () => {
   let experiences = [
     {
+      orgName: `당근`,
+      fromDate: "2023.10",
+      endDate: "",
+      items: [
+        Text(`Notification Experience 팀에서 프론트엔드 엔지니어로 일하고 있습니다.`),
+      ],
+    },
+    {
       orgName: `스매치 코퍼레이션`,
       fromDate: "2022.07",
-      endDate: "",
+      endDate: "2023.09",
       items: [
         Text(`스매치 코퍼레이션의 스매치 제품팀에서 프론트엔드 엔지니어로 일하고 있습니다.`),
         Text(`Tailwind CSS와 Radix UI를 사용하여 스매치 제품팀의 디자인 시스템을 개발했습니다.`),

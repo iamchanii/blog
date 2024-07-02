@@ -1,0 +1,20 @@
+{
+	"name": "content-engine",
+	"type": "module",
+	"exports": {
+		".": "./src/content-engine.js",
+		"./config": "./src/config.js",
+		"./sources": "./src/sources.js"
+	},
+	"version": "1.0.0",
+	"description": "A content engine for my personal blog",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"cosmiconfig": "^9.0.0"
+	}
+}

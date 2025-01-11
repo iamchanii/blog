@@ -1,0 +1,46 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { groupBy, sortBy, reverse } from 'remeda';
+
+const allPosts = await getCollection('posts');
+const postsByYears = groupBy(allPosts, (post) => post.data.date.getFullYear());
+
+const postEntries = sortBy(Object.entries(postsByYears), ([year]) =>
+  Number(year),
+).toReversed();
+---
+
+<BaseLayout>
+  {
+    postEntries.map(([year, posts]) => (
+      <section>
+        <h2>{year}</h2>
+
+        <ul>
+          {reverse(sortBy(posts, (post) => post.data.date.getTime())).map(
+            (post) => (
+              <li>
+                <a href={`/posts/${post.id}`}>{post.data.title}</a>
+              </li>
+            ),
+          )}
+        </ul>
+      </section>
+    ))
+  }
+</BaseLayout>
+
+<style>
+  h2 {
+    @apply font-bold mb-2;
+  }
+
+  section {
+    @apply mb-4;
+  }
+
+  ul {
+    @apply space-y-0.5;
+  }
+</style>

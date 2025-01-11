@@ -1,0 +1,9 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 16.4V14H7.4V16.4H5ZM5 9.2V6.8H9.8V4.4H12.2V6.8H17V9.2H12.2V11.6H9.8V9.2H5ZM26.6 21.2H24.2V23.6H21.8V21.2H19.4V23.6H17V21.2H14.6V18.8H19.4V16.4H21.8V18.8H26.6V21.2ZM26.6 9.2V11.6H24.2V16.4H21.8V4.4H24.2V9.2H26.6ZM14.6 23.6V26H7.4V18.8H9.8V23.6H14.6ZM14.6 14H17V16.4H14.6V14ZM14.6 11.6V14H12.2V11.6H14.6ZM21.8 23.6V26H19.4V23.6H21.8ZM9.8 14H7.4V11.6H9.8V14Z" fill="black"/>
+  <style>
+    path { fill: #000; }
+    @media (prefers-color-scheme: dark) {
+    path { fill: #FFF; }
+    }
+    </style>
+</svg>

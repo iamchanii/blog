@@ -4,7 +4,7 @@ import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle={frontmatter.title}>
   <header>
     <h1>{frontmatter.title}</h1>
     <time>{new Intl.DateTimeFormat('ko').format(frontmatter.date)}</time>
@@ -57,7 +57,7 @@ const { frontmatter } = Astro.props;
     }
 
     a {
-      @apply underline underline-offset-4;
+      @apply underline underline-offset-4 break-all;
     }
 
     blockquote {

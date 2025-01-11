@@ -6,8 +6,9 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer>
-  &copy; 2022-{currentYear} Chanhee Lee
-  <span role="separator"></span>
+  <p>
+    &copy; 2022-{currentYear} Chanhee Lee
+  </p>
   <a href="https://github.com/iamchanii" target="_blank">
     <IconGitHub /> GitHub
   </a>
@@ -21,12 +22,16 @@ const currentYear = new Date().getFullYear();
 
 <style>
   footer {
-    @apply flex items-center justify-center gap-2 p-2 py-8;
+    @apply flex flex-wrap items-center justify-center gap-2 px-6 py-8;
     @apply text-xs text-muted;
   }
 
   span[role='separator'] {
     @apply inline-block content-[''] h-3 left-0 w-px bg-[currentColor];
+  }
+
+  p {
+    @apply text-center flex-[1_0_100%] sm:flex-none;
   }
 
   a {

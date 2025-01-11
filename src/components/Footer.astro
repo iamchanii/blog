@@ -1,0 +1,35 @@
+---
+import IconGitHub from '../icons/github.svg';
+import IconTwitter from '../icons/twitter.svg';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer>
+  &copy; 2022-{currentYear} Chanhee Lee
+  <span role="separator"></span>
+  <a href="https://github.com/iamchanii" target="_blank">
+    <IconGitHub /> GitHub
+  </a>
+  <span role="separator"></span>
+  <a href="https://x.com/imch_dev" target="_blank">
+    <IconTwitter /> Twitter
+  </a>
+  <span role="separator"></span>
+  <a href="https://github.com/iamchanii/blog" target="_blank">Source</a>
+</footer>
+
+<style>
+  footer {
+    @apply flex items-center justify-center gap-2 p-2 py-8;
+    @apply text-xs text-muted;
+  }
+
+  span[role='separator'] {
+    @apply inline-block content-[''] h-3 left-0 w-px bg-[currentColor];
+  }
+
+  a {
+    @apply inline-flex items-center gap-1;
+  }
+</style>

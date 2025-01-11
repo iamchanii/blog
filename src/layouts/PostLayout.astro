@@ -1,0 +1,71 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout>
+  <header>
+    <h1>{frontmatter.title}</h1>
+    <time>{new Intl.DateTimeFormat('ko').format(frontmatter.date)}</time>
+  </header>
+
+  <section class="post-content">
+    <slot />
+  </section>
+</BaseLayout>
+
+<style>
+  header {
+    @apply mb-4;
+
+    h1 {
+      @apply font-bold text-lg;
+    }
+
+    time {
+      @apply text-xs;
+    }
+  }
+</style>
+
+<style is:global>
+  section.post-content {
+    @apply leading-relaxed flex flex-col gap-4;
+
+    h1,
+    h2,
+    h3 {
+      @apply font-bold;
+    }
+
+    :where(:not(.astro-code)) code {
+      @apply text-accent-foreground;
+
+      &:before,
+      &:after {
+        content: "'";
+      }
+    }
+
+    pre.astro-code {
+      @apply p-4 rounded-md overflow-hidden border -mx-4;
+    }
+
+    hr {
+      @apply mx-16 my-4;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .astro-code,
+      .astro-code span {
+        color: var(--shiki-dark) !important;
+        background-color: var(--shiki-dark-bg) !important;
+        /* Optional, if you also want font styles */
+        font-style: var(--shiki-dark-font-style) !important;
+        font-weight: var(--shiki-dark-font-weight) !important;
+        text-decoration: var(--shiki-dark-text-decoration) !important;
+      }
+    }
+  }
+</style>

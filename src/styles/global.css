@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'Intel One Mono';
+  src: url('/fonts/IntelOneMono-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Intel One Mono';
+  src: url('/fonts/IntelOneMono-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #FFFCF0;
+  --foreground: #403E3C;
+  --muted-foreground: #878580;
+  --border: #DAD8CE;
+  --accent-foreground: #CB6120;
+
+  @media (prefers-color-scheme: dark) {
+    --background: #1C1B1A;
+    --foreground: #DAD8CE;
+    --muted-foreground: #6F6E69;
+    --border: #343331;
+    --accent-foreground: #EC8B49;
+  }
+}
+
+html {
+  @apply font-mono bg-background text-foreground;
+}
+
+body {
+  @apply mx-auto max-w-[60ch] text-sm; 
+}
+
+a {
+  @apply hover:underline hover:underline-offset-4 decoration-2;
+}
+
+li {
+  @apply relative pl-[2ch];
+}
+
+li:before {
+  @apply text-muted absolute left-0;
+  content: '-';
+}
+
+* {
+  @apply border-border;
+}

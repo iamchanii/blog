@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const profileSize = 96;
+---
+
+<BaseLayout>
+  <header>
+    <Image
+      src="https://github.com/iamchanii.png"
+      alt=""
+      width={profileSize}
+      height={profileSize}
+    />
+
+    <h2>Chanhee Lee</h2>
+    <span>Software Engineer, Always working on something :)</span>
+  </header>
+
+  <section>
+    <h2>Experiences</h2>
+    <ul>
+      <li>당근 (2023.10)</li>
+      <li>스매치 코퍼레이션 (2022.07-2023.09)</li>
+      <li>다노 (2020.04-2022.05)</li>
+      <li>플러스티브이 (2018)</li>
+      <li>타운컴퍼니 (2018)</li>
+      <li>테이블매니저 (2017)</li>
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  h2 {
+    @apply font-bold;
+  }
+
+  header {
+    @apply flex flex-col space-y-1;
+
+    img {
+      @apply rounded-sm mb-4;
+    }
+  }
+
+  section {
+    @apply mt-6 space-y-1;
+
+    ul {
+      @apply space-y-1;
+    }
+  }
+</style>

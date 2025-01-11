@@ -1,1 +1,8 @@
+dist/
+.astro/
 node_modules/
+.vscode
+.direnv
+.env
+.env.production
+.DS_Store

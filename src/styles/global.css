@@ -23,7 +23,7 @@ body {
 }
 
 a {
-  @apply hover:underline hover:underline-offset-4 decoration-2;
+  @apply underline underline-offset-4 decoration-1;
 }
 
 li {

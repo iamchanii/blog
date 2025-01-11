@@ -1,10 +1,13 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 
-const { frontmatter } = Astro.props;
+const { frontmatter, id } = Astro.props;
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
+<BaseLayout
+  pageTitle={frontmatter.title}
+  imageUrl={new URL(`/og/posts/${id}.png`, Astro.url)}
+>
   <header>
     <h1>{frontmatter.title}</h1>
     <time>{new Intl.DateTimeFormat('ko').format(frontmatter.date)}</time>

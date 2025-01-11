@@ -1,7 +1,7 @@
 ---
 import { ClientRouter } from 'astro:transitions';
 
-const { title, description } = Astro.props;
+const { title, description, image } = Astro.props;
 const cannonical = new URL(new URL(Astro.request.url).pathname, Astro.site);
 
 declare global {
@@ -29,6 +29,11 @@ declare global {
 <meta property="og:title" content={title} />
 <meta property="og:url" content={cannonical} />
 {description && <meta property="og:description" content={description} />}
+{image && [
+<meta property="og:image" content={image} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+]}
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:creator" content="@imch_dev" />
 <meta name="generator" content={Astro.generator} />

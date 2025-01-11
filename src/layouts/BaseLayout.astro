@@ -5,13 +5,13 @@ import Footer from '../components/Footer.astro';
 import PostHog from '../components/PostHog.astro';
 import Head from '../components/Head.astro';
 
-const { pageTitle } = Astro.props;
+const { pageTitle, imageUrl } = Astro.props;
 ---
 
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <Head title={pageTitle} />
+    <Head title={pageTitle} image={imageUrl} />
   </head>
   <body>
     <Header />

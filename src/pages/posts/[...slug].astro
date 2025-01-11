@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostLayout from '../../layouts/PostLayout.astro';
 import { render } from 'astro:content';
 
@@ -19,6 +18,6 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<PostLayout frontmatter={post.data}>
+<PostLayout frontmatter={post.data} id={post.id}>
   <Content />
 </PostLayout>

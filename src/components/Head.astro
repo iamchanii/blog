@@ -1,4 +1,6 @@
 ---
+import { ClientRouter } from 'astro:transitions';
+
 const { title, description } = Astro.props;
 const cannonical = new URL(new URL(Astro.request.url).pathname, Astro.site);
 
@@ -33,3 +35,5 @@ declare global {
 <title lang="ko">
   {title ? `${title} | imch.dev` : 'imch.dev'}
 </title>
+
+<ClientRouter />

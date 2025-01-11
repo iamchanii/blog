@@ -1,5 +1,5 @@
 ---
-title: "블로그 리메이크 후기"
+title: '블로그 리메이크 후기'
 date: 2022-06-21
 ---
 
@@ -76,7 +76,7 @@ Gatsby에 변경점이 있으면 플러그인도 그에 맞춰 대응을 하기 
 
 ```md
 ---
-title: "글 제목"
+title: '글 제목'
 date: 2022-06-22
 ---
 
@@ -86,7 +86,7 @@ date: 2022-06-22
 Gatsby가 데이터 소스로 마크다운을 가져와 유효한 노드로 추가하게 되면, Frontmatter에 입력한 데이터들은 기본적으로 `String` 타입이, 타입스크립트로 표현하면 `string | null` 타입이 된다. 이 값을 JSX에서 가져다 쓰려면 Non-Null Assertion을 해야 한다.
 
 ```tsx
-<p>{data.mdx!.frontmatter!.title!}</p>;
+<p>{data.mdx!.frontmatter!.title!}</p>
 ```
 
 까짓거 붙이면 그만이지 싶지만, 내 마크다운 파일들이 `title`과 `date` 값을 무조건 포함하는 상황인데도 `string | null`로 취급되는 것은 타입이 실제 데이터를 올바르게 투영하고 있지 않다는 의미이다.
@@ -96,8 +96,8 @@ Gatsby의 좋은 점들 중 하나는 이러한 타입도 커스텀할 수 있�
 ```ts
 import { GatsbyNode } from 'gatsby';
 
-export const createSchemaCustomization:
-  GatsbyNode['createSchemaCustomization'] = ({ actions }) => {
+export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] =
+  ({ actions }) => {
     actions.createTypes(`#graphql
       type MdxFrontmatter {
         title: String!
@@ -110,7 +110,7 @@ export const createSchemaCustomization:
 이제 `mdx.frontmatter.title`의 타입은 `string`으로 제공된다. 추가적으로 `date` 필드는 `@dateformat` 디렉티브를 적용해주었다. 이 디렉티브 덕분에 손 하나 안대고 특정 포맷으로 변환된 날짜를 가져올 수 있게 되었다.
 
 ```graphql
-query ArticlePage ($id: String) {
+query ArticlePage($id: String) {
   mdx(id: { eq: $id }) {
     frontmatter {
       title

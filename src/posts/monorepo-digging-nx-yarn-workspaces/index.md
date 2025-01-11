@@ -1,5 +1,5 @@
 ---
-title: "모노레포 삽질기: Nx와 Yarn Workspaces"
+title: '모노레포 삽질기: Nx와 Yarn Workspaces'
 date: 2020-11-14
 ---
 

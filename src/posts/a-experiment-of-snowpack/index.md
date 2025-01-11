@@ -1,5 +1,5 @@
 ---
-title: "Snowpack 써보기"
+title: 'Snowpack 써보기'
 date: 2020-08-15
 ---
 

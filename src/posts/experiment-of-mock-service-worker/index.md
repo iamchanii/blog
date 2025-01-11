@@ -1,5 +1,5 @@
 ---
-title: "Mock Service Worker(MSW) 사용해보기"
+title: 'Mock Service Worker(MSW) 사용해보기'
 date: 2020-06-28
 ---
 
@@ -7,7 +7,7 @@ API 호출은 클라이언트에서 빼먹을 수 없는 부분이다. 일반적
 
 이것이 내가 알고 있던 "일반적인, 클라이언트에서 API 호출과 관련된 로직 테스트하는 방법"이었다.
 
-Don't Mock Fetch(or Axios). Fetch나 Axios를 모킹하지 말란다. 썸네일을 보고 든 생각은 "그럼 어떻게 테스트 코드를 작성하라는 것인가?"였다. 영상의 요지는 [jest-fetch-mock](https://github.com/jefflau/jest-fetch-mock)이나 [axios-mock-adapter](https://github.com/ctimmerm/axios-mock-adapter)처럼 모킹하는 방법 대신, [Mock Service Worker](https://mswjs.io/)_(이하 MSW)_를 사용하여 실제 사용자처럼 테스트를 작성하라고 한다.
+Don't Mock Fetch(or Axios). Fetch나 Axios를 모킹하지 말란다. 썸네일을 보고 든 생각은 "그럼 어떻게 테스트 코드를 작성하라는 것인가?"였다. 영상의 요지는 [jest-fetch-mock](https://github.com/jefflau/jest-fetch-mock)이나 [axios-mock-adapter](https://github.com/ctimmerm/axios-mock-adapter)처럼 모킹하는 방법 대신, [Mock Service Worker](https://mswjs.io/)*(이하 MSW)*를 사용하여 실제 사용자처럼 테스트를 작성하라고 한다.
 
 실제 사용자처럼 테스트를 한다는 것은 어떤 의미일까? MSW 공식 문서의 [서비스 워커를 사용하는 이유](https://mswjs.io/docs/#why-service-workers)에 따르면, MSW는 네트워크 레벨에서 요청을 가로채기 위해 서비스 워커를 사용하는데, 덕분에 모킹 여부와 상관 없이 애플리케이션이 잘 작동하는 것을 보장하고, 특히 **코드를 변경할 필요가 없다**고 한다.
 

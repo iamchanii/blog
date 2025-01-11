@@ -1,5 +1,5 @@
 ---
-title: "TinaCMS로 편집 가능한 홈페이지 만들기"
+title: 'TinaCMS로 편집 가능한 홈페이지 만들기'
 date: 2019-12-20
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Gatsby 로 블로그 만들기 (1)"
+title: 'Gatsby 로 블로그 만들기 (1)'
 date: 2019-10-10
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "GraphQL 클라이언트 스키마 사용하기"
+title: 'GraphQL 클라이언트 스키마 사용하기'
 date: 2020-09-03
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Netlify 환경에서 GenType 패키지 설치 이슈 해결하기"
+title: 'Netlify 환경에서 GenType 패키지 설치 이슈 해결하기'
 date: 2022-06-19
 ---
 
@@ -72,7 +72,7 @@ $ yarn patch gentype
 ```diff
  function movePlatformBinary(platform) {
    const sourcePath = getPlatformBinaryPath(platform);
- 
+
 -  if(!fs.existsSync(sourcePath)) {
 -    return fail("error: executable not found: " + sourcePath);
 +  if (fs.existsSync(sourcePath)) {
@@ -80,7 +80,7 @@ $ yarn patch gentype
 +    fs.chmodSync(targetPath, 0777);
 +    return;
 +  }
-+ 
++
 +  if (fs.existsSync(targetPath)) {
 +    const text = fs.readFileSync(targetPath, { encoding: 'utf8' });
 +    if (/gentype was not installed correctly/.test(text)) {

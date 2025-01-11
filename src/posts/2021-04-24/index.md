@@ -1,5 +1,5 @@
 ---
-title: "React Query 조금 더 쉽게 쓰기"
+title: 'React Query 조금 더 쉽게 쓰기'
 date: 2021-04-24
 ---
 

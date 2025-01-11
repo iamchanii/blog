@@ -1,5 +1,5 @@
 ---
-title: "API 호출 테스트 코드 작성 방법 (with Typescript)"
+title: 'API 호출 테스트 코드 작성 방법 (with Typescript)'
 date: 2020-03-02
 ---
 
@@ -161,9 +161,9 @@ fetchMock.mockResponse(request => {
 });
 ```
 
-Fetch API를 전역으로 모킹하고 비어있는 응답을 반환하되, RANDOM\_DOG\_IMAGE\_URL로 요청하는 경우 별도의 Promise 객체를 반환하도록 했다. 이후 \_resolve에 해당 객체의 resolve 함수를 가리키도록 저장한다.
+Fetch API를 전역으로 모킹하고 비어있는 응답을 반환하되, RANDOM_DOG_IMAGE_URL로 요청하는 경우 별도의 Promise 객체를 반환하도록 했다. 이후 \_resolve에 해당 객체의 resolve 함수를 가리키도록 저장한다.
 
-이렇게 하면 테스트 환경에서 컴포넌트는 Fetch API 사용 시 RANDOM\_DOG\_IMAGE\_URL로 요청했기 때문에 테스트 코드 내에서 \_resolve가 호출될 때 까지 계속해서 대기 상태에 있을 것이다.
+이렇게 하면 테스트 환경에서 컴포넌트는 Fetch API 사용 시 RANDOM_DOG_IMAGE_URL로 요청했기 때문에 테스트 코드 내에서 \_resolve가 호출될 때 까지 계속해서 대기 상태에 있을 것이다.
 
 ### 컴포넌트 렌더링 및 Resolve 호출
 

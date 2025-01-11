@@ -1,5 +1,5 @@
 ---
-title: "맥에서 node-gyp 문제 해결하기"
+title: '맥에서 node-gyp 문제 해결하기'
 date: 2020-02-17
 ---
 

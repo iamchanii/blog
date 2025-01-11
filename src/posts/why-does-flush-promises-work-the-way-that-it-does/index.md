@@ -1,5 +1,5 @@
 ---
-title: "flushPromises가 작동하는 이유"
+title: 'flushPromises가 작동하는 이유'
 date: 2020-01-26
 ---
 

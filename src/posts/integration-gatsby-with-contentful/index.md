@@ -1,5 +1,5 @@
 ---
-title: "Gatsby와 Contentful 연동하기"
+title: 'Gatsby와 Contentful 연동하기'
 date: 2019-12-28
 ---
 
@@ -19,7 +19,7 @@ date: 2019-12-28
 
 - title 제목
 - slug /posts 이후의 주소
-- creation\_date 작성 일자
+- creation_date 작성 일자
 - postBody 본문
 
 > content라는 이름 대신 postBody를 사용한 이유는, content로 하니까 나중에 GraphQL 노드로 추가가 되지 않는다. 정확한 이유는 알 수 없다.
@@ -64,7 +64,7 @@ gatsby-config.js에 플러그인을 추가한다.
 
 하지만 먼저 로컬에서 확인하는게 중요하므로, 프로젝트 루트 폴더에 .env.development와 .env.prodction 파일을 만들자.
 
-CONTENTFUL\_SPACE\_ID와 CONTENTFUL\_ACCESS\_TOKEN을 저장해야 하는데, 두 항목은 Contentful > Settings > API Keys 에서 확인할 수 있다. 최초에 Example Key 1 이라고 추가되어 있는게 있다. 이걸 그대로 사용해도 좋고, 새로 생성해도 된다.
+CONTENTFUL_SPACE_ID와 CONTENTFUL_ACCESS_TOKEN을 저장해야 하는데, 두 항목은 Contentful > Settings > API Keys 에서 확인할 수 있다. 최초에 Example Key 1 이라고 추가되어 있는게 있다. 이걸 그대로 사용해도 좋고, 새로 생성해도 된다.
 
 주의할 점은, Content Delivery API의 액세스 토큰을 사용해야 한다. 그 밑에는 Content Preview API의 액세스 토큰이 있다. 이것과 헷갈리지 않게 주의하자.
 

@@ -56,6 +56,14 @@ const { frontmatter } = Astro.props;
       @apply mx-16 my-4;
     }
 
+    a {
+      @apply underline underline-offset-4;
+    }
+
+    blockquote {
+      @apply pl-4 border-l-4 italic;
+    }
+
     @media (prefers-color-scheme: dark) {
       .astro-code,
       .astro-code span {

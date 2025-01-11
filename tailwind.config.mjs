@@ -11,9 +11,6 @@ export default {
       border: 'var(--border)',
       'accent-foreground': 'var(--accent-foreground)'
     },
-    fontFamily: {
-      mono: ['Intel One Mono', ...defaultTheme.fontFamily.mono]
-    }
   },
   plugins: [],
 }

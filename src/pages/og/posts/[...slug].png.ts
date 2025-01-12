@@ -20,47 +20,69 @@ const satoriOptions = await getSatoriOptions();
 export const GET: APIRoute = async ({ params }) => {
   const post = postsById[params.slug!];
 
-  const svg = await satori(
-    {
-      type: 'div',
-      props: {
-        children: [
-          {
-            type: 'p',
-            props: {
-              children: post.data.title,
-              style: {
-                fontWeight: 'bold',
-                fontSize: 55,
-                margin: 0,
-              },
+  const wrapperStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    gap: 24,
+    padding: 160,
+    background: '#1C1B1A',
+    color: '#DAD8CE',
+    width: '100%',
+    height: '100%',
+    fontFamily: 'Galmuri',
+  }
+
+  const node = post.data.description ? {
+    type: 'div',
+    props: {
+      children: [
+        {
+          type: 'p',
+          props: {
+            children: post.data.title,
+            style: {
+              fontWeight: 'bold',
+              fontSize: 55,
+              margin: 0,
             },
           },
-          post.data.description && {
-            type: 'p',
-            props: {
-              children: post.data.description,
-              style: {
-                fontSize: 55,
-                margin: 0,
-              },
-            },
-          },
-        ],
-        style: {
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'flex-start',
-          gap: 24,
-          padding: 160,
-          background: '#1C1B1A',
-          color: '#DAD8CE',
-          width: '100%',
-          height: '100%',
-          fontFamily: 'Galmuri',
         },
-      },
+        {
+          type: 'p',
+          props: {
+            children: post.data.description,
+            style: {
+              fontSize: 55,
+              margin: 0,
+            },
+          },
+        },
+      ],
+      style: wrapperStyle,
     },
+  } : {
+    type: 'div',
+    props: {
+      children: [
+        {
+          type: 'p',
+          props: {
+            children: post.data.title,
+            style: {
+              fontWeight: 'bold',
+              fontSize: 66,
+              margin: 0,
+            },
+          },
+        },
+      ],
+      style: wrapperStyle,
+    },
+  }
+
+  const svg = await satori(
+    node,
     satoriOptions,
   );
 

@@ -31,7 +31,7 @@ export const GET: APIRoute = async ({ params }) => {
               children: post.data.title,
               style: {
                 fontWeight: 'bold',
-                fontSize: 36,
+                fontSize: 55,
                 margin: 0,
               },
             },
@@ -41,7 +41,7 @@ export const GET: APIRoute = async ({ params }) => {
             props: {
               children: post.data.description,
               style: {
-                fontSize: 36,
+                fontSize: 55,
                 margin: 0,
               },
             },

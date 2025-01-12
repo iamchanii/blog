@@ -16,7 +16,6 @@ export function getStaticPaths() {
 }
 
 const satoriOptions = await getSatoriOptions();
-const intl = new Intl.DateTimeFormat('ko');
 
 export const GET: APIRoute = async ({ params }) => {
   const post = postsById[params.slug!];
@@ -31,9 +30,8 @@ export const GET: APIRoute = async ({ params }) => {
             props: {
               children: post.data.title,
               style: {
-                marginTop: 'auto',
                 fontWeight: 'bold',
-                fontSize: 32,
+                fontSize: 36,
                 margin: 0,
               },
             },
@@ -43,17 +41,7 @@ export const GET: APIRoute = async ({ params }) => {
             props: {
               children: post.data.description,
               style: {
-                fontSize: 32,
-                margin: 0,
-              },
-            },
-          },
-          {
-            type: 'p',
-            props: {
-              children: intl.format(post.data.date),
-              style: {
-                fontSize: 24,
+                fontSize: 36,
                 margin: 0,
               },
             },
@@ -62,9 +50,9 @@ export const GET: APIRoute = async ({ params }) => {
         style: {
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'flex-end',
+          justifyContent: 'flex-start',
           gap: 24,
-          padding: 120,
+          padding: 160,
           background: '#1C1B1A',
           color: '#DAD8CE',
           width: '100%',

@@ -23,17 +23,19 @@ export const GET: APIRoute = async ({ params }) => {
   const wrapperStyle = {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     gap: 24,
-    padding: 160,
+    padding: 120,
+    paddingBottom: 360,
     background: '#1C1B1A',
     color: '#DAD8CE',
     width: '100%',
     height: '100%',
     fontFamily: 'Galmuri',
+    position: 'relative'
   }
 
-  const node = post.data.description ? {
+  const node = {
     type: 'div',
     props: {
       children: [
@@ -43,7 +45,7 @@ export const GET: APIRoute = async ({ params }) => {
             children: post.data.title,
             style: {
               fontWeight: 'bold',
-              fontSize: 55,
+              fontSize: 60,
               margin: 0,
             },
           },
@@ -51,31 +53,36 @@ export const GET: APIRoute = async ({ params }) => {
         {
           type: 'p',
           props: {
-            children: post.data.description,
+            children: new Intl.DateTimeFormat('ko').format(post.data.date),
             style: {
-              fontSize: 55,
+              fontSize: 24,
               margin: 0,
             },
           },
         },
-      ],
-      style: wrapperStyle,
-    },
-  } : {
-    type: 'div',
-    props: {
-      children: [
         {
           type: 'p',
           props: {
-            children: post.data.title,
+            children: post.body?.split('\n').join('\n\n').slice(0, 160),
             style: {
-              fontWeight: 'bold',
-              fontSize: 66,
+              fontSize: 36,
+              display: 'block',
               margin: 0,
+              whiteSpace: 'pre-line',
+              lineClamp: 6,
+              lineHeight: 1.4,
+              backgroundImage: 'linear-gradient(180deg, #DAD8CE 50%, #1C1B1A)',
+              backgroundClip: 'text',
+              '-webkit-background-clip': 'text',
+              color: 'transparent',
+              position: 'absolute',
+              left: 120,
+              right: 120,
+              height: 315,
             },
           },
         },
+
       ],
       style: wrapperStyle,
     },

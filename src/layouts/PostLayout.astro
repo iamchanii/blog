@@ -6,7 +6,7 @@ const { frontmatter, id } = Astro.props;
 
 <BaseLayout
   pageTitle={frontmatter.title}
-  imageUrl={new URL(`/og/posts/${id}.png`, Astro.url)}
+  imageUrl={new URL(`/og/posts/${id}.png`, Astro.request.url)}
 >
   <header>
     <h1>{frontmatter.title}</h1>

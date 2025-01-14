@@ -42,6 +42,14 @@ const { frontmatter, id } = Astro.props;
       @apply font-bold;
     }
 
+    h2 {
+      @apply text-base before:content-['##_'] before:opacity-60;
+    }
+
+    h3 {
+      @apply before:content-['###_'] before:opacity-60;
+    }
+
     :where(:not(.astro-code)) code {
       @apply text-accent-foreground;
 

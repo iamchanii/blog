@@ -63,15 +63,15 @@ export const GET: APIRoute = async ({ params }) => {
         {
           type: 'p',
           props: {
-            children: post.body?.split('\n').join('\n\n').slice(0, 160),
+            children: post.body?.replace(/\n/g, ' ').split('#').at(0)?.trim(),
             style: {
               fontSize: 36,
               display: 'block',
               margin: 0,
               whiteSpace: 'pre-line',
-              lineClamp: 6,
+              lineClamp: 5,
               lineHeight: 1.4,
-              backgroundImage: 'linear-gradient(180deg, #DAD8CE 50%, #1C1B1A)',
+              backgroundImage: 'linear-gradient(180deg, #DAD8CE, #1C1B1A 75%)',
               backgroundClip: 'text',
               '-webkit-background-clip': 'text',
               color: 'transparent',

@@ -39,15 +39,15 @@ const { frontmatter, id } = Astro.props;
     h1,
     h2,
     h3 {
-      @apply font-bold;
+      @apply font-bold relative;
     }
 
     h2 {
-      @apply text-base before:content-['##_'] before:opacity-60;
+      @apply text-base mt-6;
     }
 
     h3 {
-      @apply before:content-['###_'] before:opacity-60;
+      @apply mt-3;
     }
 
     :where(:not(.astro-code)) code {

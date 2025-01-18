@@ -6,7 +6,7 @@ const { frontmatter, id } = Astro.props;
 
 <BaseLayout
   pageTitle={frontmatter.title}
-  imageUrl={new URL(`/og/posts/${id}.png`, Astro.url)}
+  imageUrl={new URL(`/og/posts/${id}.png`, Astro.request.url)}
 >
   <header>
     <h1>{frontmatter.title}</h1>
@@ -39,7 +39,15 @@ const { frontmatter, id } = Astro.props;
     h1,
     h2,
     h3 {
-      @apply font-bold;
+      @apply font-bold relative;
+    }
+
+    h2 {
+      @apply text-base mt-6;
+    }
+
+    h3 {
+      @apply mt-3;
     }
 
     :where(:not(.astro-code)) code {

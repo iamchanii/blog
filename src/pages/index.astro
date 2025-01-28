@@ -1,34 +1,46 @@
 ---
 import { getCollection } from 'astro:content';
-import { groupBy, reverse, sortBy } from 'remeda';
+import IconArchive from '../icons/archive.svg';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const allPosts = await getCollection('posts');
-const postsByYears = groupBy(allPosts, (post) => post.data.date.getFullYear());
+interface PostLike {
+  data: { date: Date };
+}
 
-const postEntries = sortBy(Object.entries(postsByYears), ([year]) =>
-  Number(year),
-).toReversed();
+const allPosts = await getCollection('posts');
+const currentYear = new Date().getFullYear();
+const posts = allPosts.filter(onlyCurrentYearPost).toSorted(sortByDate);
+
+function onlyCurrentYearPost(post: PostLike) {
+  return post.data.date.getFullYear() === currentYear;
+}
+
+function sortByDate(a: PostLike, b: PostLike) {
+  return a.data.date.getTime() - b.data.date.getTime();
+}
 ---
 
 <BaseLayout>
-  {
-    postEntries.map(([year, posts]) => (
-      <section>
-        <h2>{year}</h2>
+  <section>
+    <h2>{currentYear}</h2>
 
-        <ul>
-          {reverse(sortBy(posts, (post) => post.data.date.getTime())).map(
-            (post) => (
-              <li>
-                <a href={`/posts/${post.id}`}>{post.data.title}</a>
-              </li>
-            ),
-          )}
-        </ul>
-      </section>
-    ))
-  }
+    <ul>
+      {
+        posts.map((post) => (
+          <li>
+            <a href={`/posts/${post.id}/`}>{post.data.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <div class="browse">
+    <a href="/browse/">
+      <IconArchive />
+      Show Older Posts
+    </a>
+  </div>
 </BaseLayout>
 
 <style>
@@ -42,5 +54,13 @@ const postEntries = sortBy(Object.entries(postsByYears), ([year]) =>
 
   ul {
     @apply space-y-0.5;
+  }
+
+  .browse {
+    @apply flex justify-center;
+
+    a {
+      @apply text-muted text-xs inline-flex items-center gap-1;
+    }
   }
 </style>

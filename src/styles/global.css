@@ -32,7 +32,7 @@ li {
 
 li:before {
   @apply text-muted absolute left-0;
-  content: '-';
+  content: "-";
 }
 
 * {

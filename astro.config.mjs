@@ -1,7 +1,7 @@
+import sitemap from '@astrojs/sitemap';
+import tailwind from '@astrojs/tailwind';
 // @ts-check
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
@@ -10,7 +10,7 @@ export default defineConfig({
     svg: true,
   },
   image: {
-    domains: ["github.com"],
+    domains: ['github.com'],
   },
   markdown: {
     shikiConfig: {
@@ -18,12 +18,12 @@ export default defineConfig({
         light: 'vitesse-light',
         dark: 'vitesse-dark',
       },
-    }
+    },
   },
   integrations: [
     tailwind({
       nesting: true,
     }),
     sitemap(),
-  ]
+  ],
 });

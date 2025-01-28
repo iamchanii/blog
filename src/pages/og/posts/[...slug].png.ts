@@ -1,5 +1,5 @@
-import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
+import type { APIRoute } from 'astro';
 import { indexBy } from 'remeda';
 import satori, { type SatoriOptions } from 'satori';
 import sharp from 'sharp';
@@ -32,8 +32,8 @@ export const GET: APIRoute = async ({ params }) => {
     width: '100%',
     height: '100%',
     fontFamily: 'Galmuri',
-    position: 'relative'
-  }
+    position: 'relative',
+  };
 
   const node = {
     type: 'div',
@@ -82,16 +82,12 @@ export const GET: APIRoute = async ({ params }) => {
             },
           },
         },
-
       ],
       style: wrapperStyle,
     },
-  }
+  };
 
-  const svg = await satori(
-    node,
-    satoriOptions,
-  );
+  const svg = await satori(node, satoriOptions);
 
   const pngBuffer = await sharp(Buffer.from(svg)).png().toBuffer();
 

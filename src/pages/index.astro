@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
+import { groupBy, reverse, sortBy } from 'remeda';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { groupBy, sortBy, reverse } from 'remeda';
 
 const allPosts = await getCollection('posts');
 const postsByYears = groupBy(allPosts, (post) => post.data.date.getFullYear());

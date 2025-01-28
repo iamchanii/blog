@@ -1,4 +1,4 @@
-import defaultTheme from 'tailwindcss/defaultTheme'
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -9,8 +9,8 @@ export default {
       foreground: 'var(--foreground)',
       muted: 'var(--muted-foreground)',
       border: 'var(--border)',
-      'accent-foreground': 'var(--accent-foreground)'
+      'accent-foreground': 'var(--accent-foreground)',
     },
   },
   plugins: [],
-}
+};

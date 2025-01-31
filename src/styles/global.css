@@ -27,7 +27,7 @@ a {
 }
 
 li {
-  @apply relative pl-[2ch];
+  @apply relative pl-[2ch] pt-0.5;
 }
 
 li:before {

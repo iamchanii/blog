@@ -11,6 +11,13 @@ const { frontmatter, id } = Astro.props;
   <header>
     <h1>{frontmatter.title}</h1>
     <time>{new Intl.DateTimeFormat('ko').format(frontmatter.date)}</time>
+    <aside>
+      {
+        frontmatter.tags?.map((tag: string) => (
+          <a href={`/tags/${tag}/`}>{tag} </a>
+        ))
+      }
+    </aside>
   </header>
 
   <section class="post-content">
@@ -20,7 +27,7 @@ const { frontmatter, id } = Astro.props;
 
 <style>
   header {
-    @apply mb-4;
+    @apply mb-6;
 
     h1 {
       @apply font-bold text-lg;
@@ -28,6 +35,14 @@ const { frontmatter, id } = Astro.props;
 
     time {
       @apply text-xs;
+    }
+
+    aside {
+      @apply empty:hidden flex gap-2 items-center mt-2;
+
+      a {
+        @apply text-xs text-muted before:content-['#'];
+      }
     }
   }
 </style>

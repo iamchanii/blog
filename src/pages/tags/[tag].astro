@@ -1,0 +1,78 @@
+---
+import { getCollection } from 'astro:content';
+import {
+  entries,
+  filter,
+  flat,
+  flatMap,
+  groupBy,
+  mapValues,
+  pipe,
+  prop,
+  sortBy,
+} from 'remeda';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+
+  const tags = pipe(
+    posts,
+    flatMap((post) => post.data.tags ?? []),
+    flat(),
+  );
+
+  return tags.map((tag) => {
+    return {
+      params: { tag },
+      props: {
+        posts: pipe(
+          posts,
+          filter((post) => post.data.tags?.includes(tag) ?? false),
+        ),
+      },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<BaseLayout>
+  <section>
+    <ul>
+      <li>
+        <strong>
+          {tag}
+        </strong>
+
+        <ul>
+          {
+            posts.map((post) => (
+              <li>
+                <a href={`/posts/${post.id}/`}>{post.data.title}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <div class="browse"></div>
+</BaseLayout>
+
+<style>
+  h2 {
+    @apply font-bold mb-2;
+  }
+
+  section {
+    @apply mb-4;
+  }
+
+  ul {
+    @apply space-y-0.5;
+  }
+</style>

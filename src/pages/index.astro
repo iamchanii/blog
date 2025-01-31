@@ -1,46 +1,72 @@
 ---
 import { getCollection } from 'astro:content';
-import IconArchive from '../icons/archive.svg';
+import {
+  entries,
+  flat,
+  flatMap,
+  groupBy,
+  mapValues,
+  pipe,
+  prop,
+  sortBy,
+} from 'remeda';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-interface PostLike {
-  data: { date: Date };
-}
+const posts = await getCollection('posts');
 
-const allPosts = await getCollection('posts');
-const currentYear = new Date().getFullYear();
-const posts = allPosts.filter(onlyCurrentYearPost).toSorted(sortByDate);
+const postsByYear = pipe(
+  posts,
+  groupBy((post) => post.data.date.getFullYear()),
+  mapValues(sortBy((post) => post.data.date.getTime())),
+  entries(),
+  sortBy([prop(0), 'desc']),
+);
 
-function onlyCurrentYearPost(post: PostLike) {
-  return post.data.date.getFullYear() === currentYear;
-}
-
-function sortByDate(a: PostLike, b: PostLike) {
-  return a.data.date.getTime() - b.data.date.getTime();
-}
+const tags = pipe(
+  posts,
+  flatMap((post) => post.data.tags ?? []),
+  flat(),
+);
 ---
 
 <BaseLayout>
   <section>
-    <h2>{currentYear}</h2>
-
     <ul>
-      {
-        posts.map((post) => (
-          <li>
-            <a href={`/posts/${post.id}/`}>{post.data.title}</a>
-          </li>
-        ))
-      }
+      <li>
+        <strong>tags</strong>
+        <ul>
+          {
+            tags.map((tag) => (
+              <li>
+                <a href={`/tags/${tag}/`}>{tag}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </li>
+      <li>
+        <strong>posts</strong>
+        <ul>
+          {
+            postsByYear.map(([year, posts]) => (
+              <li>
+                {year}
+                <ul>
+                  {posts.map((post) => (
+                    <li>
+                      <a href={`/posts/${post.id}/`}>{post.data.title}</a>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))
+          }
+        </ul>
+      </li>
     </ul>
   </section>
 
-  <div class="browse">
-    <a href="/browse/">
-      <IconArchive />
-      Show Older Posts
-    </a>
-  </div>
+  <div class="browse"></div>
 </BaseLayout>
 
 <style>
@@ -54,13 +80,5 @@ function sortByDate(a: PostLike, b: PostLike) {
 
   ul {
     @apply space-y-0.5;
-  }
-
-  .browse {
-    @apply flex justify-center;
-
-    a {
-      @apply text-muted text-xs inline-flex items-center gap-1;
-    }
   }
 </style>

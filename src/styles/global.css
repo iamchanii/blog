@@ -12,14 +12,19 @@
     --border: #343331;
     --accent-foreground: #ec8b49;
   }
+
+  @media print {
+    --background: #fff;
+    --foreground: #000;
+  }
 }
 
 html {
-  @apply font-mono bg-background text-foreground;
+  @apply font-mono bg-background text-foreground print:text-lg;
 }
 
 body {
-  @apply mx-auto max-w-[60ch] text-sm;
+  @apply mx-auto max-w-[60ch] text-sm print:max-w-full;
 }
 
 a {

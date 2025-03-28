@@ -1,11 +1,13 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PrintOnly from '../components/PrintOnly.astro';
+import Resume from './resume.mdx';
 
 const profileSize = 96;
 ---
 
-<BaseLayout>
+<BaseLayout> 
   <header>
     <Image
       src="https://github.com/iamchanii.png"
@@ -15,27 +17,16 @@ const profileSize = 96;
       loading="eager"
     />
 
-    <h2>Chanhee Lee</h2>
+    <p>Chanhee Lee</p>
     <span>Software Engineer, Always working on something :)</span>
   </header>
 
   <section>
-    <h2>Experiences</h2>
-    <ul>
-      <li>당근 (2023.10-Now)</li>
-      <li>스매치 코퍼레이션 (2022.07-2023.09)</li>
-      <li>다노 (2020.04-2022.05)</li>
-      <li>플러스티브이 (2018)</li>
-      <li>타운컴퍼니 (2018)</li>
-      <li>테이블매니저 (2017)</li>
-    </ul>
+    <Resume />
   </section>
 </BaseLayout>
 
 <style>
-  h2 {
-    @apply font-bold;
-  }
 
   header {
     @apply flex flex-col space-y-1;
@@ -43,13 +34,21 @@ const profileSize = 96;
     img {
       @apply rounded-sm mb-4;
     }
+
+    p {
+      @apply font-bold;
+    }
   }
 
   section {
-    @apply mt-6 space-y-1;
+    @apply mt-4;
+  }
 
-    ul {
-      @apply space-y-1;
-    }
+  section :global(h2) {
+    @apply mb-4 font-bold print:text-lg;
+  }
+
+  section :global(h3) {
+    @apply my-2 before:content-['-_'] print:before:hidden print:mt-4 print:font-bold;
   }
 </style>

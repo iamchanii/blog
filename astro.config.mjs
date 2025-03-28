@@ -4,6 +4,8 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import { defineConfig } from 'astro/config';
 
+import mdx from '@astrojs/mdx';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://imch.dev',
@@ -21,11 +23,7 @@ export default defineConfig({
       },
     },
   },
-  integrations: [
-    tailwind({
-      nesting: true,
-    }),
-    sitemap(),
-    react(),
-  ],
+  integrations: [tailwind({
+    nesting: true,
+  }), sitemap(), react(), mdx()],
 });

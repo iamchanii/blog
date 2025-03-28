@@ -7,19 +7,14 @@ import Resume from './resume.mdx';
 const profileSize = 96;
 ---
 
-<BaseLayout> 
-  <header>
-    <Image
-      src="https://github.com/iamchanii.png"
-      alt=""
-      width={profileSize}
-      height={profileSize}
-      loading="eager"
-    />
-
-    <p>Chanhee Lee</p>
-    <span>Software Engineer, Always working on something :)</span>
-  </header>
+<BaseLayout>
+  <Image
+    src="https://github.com/iamchanii.png"
+    alt=""
+    width={profileSize}
+    height={profileSize}
+    loading="eager"
+  />
 
   <section>
     <Resume />
@@ -27,7 +22,6 @@ const profileSize = 96;
 </BaseLayout>
 
 <style>
-
   header {
     @apply flex flex-col space-y-1;
 
@@ -45,7 +39,7 @@ const profileSize = 96;
   }
 
   section :global(h2) {
-    @apply mb-4 font-bold print:text-lg;
+    @apply my-4 font-bold print:text-lg;
   }
 
   section :global(h3) {

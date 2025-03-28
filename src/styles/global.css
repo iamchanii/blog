@@ -15,12 +15,12 @@
 
   @media print {
     --background: #fff;
-    --foreground: #000;
+    --foreground: #222;
   }
 }
 
 html {
-  @apply font-mono bg-background text-foreground print:text-lg;
+  @apply font-mono bg-background text-foreground print:text-xl;
 }
 
 body {
@@ -41,5 +41,5 @@ li:before {
 }
 
 * {
-  @apply border-border;
+  @apply border-border print:break-keep;
 }

@@ -33,6 +33,7 @@ function readFullName(fragmentRef: readFulleName$key) {
         lastName
       }
     `,
+    fragmentRef
   );
 
   return `${data.lastName} ${data.firstName}`;
